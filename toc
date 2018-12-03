@@ -1,0 +1,38 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="messages-for-rabbitmq" audience="service" href="/docs/services/messages-for-rabbitmq/index.html" path="services/messages-for-rabbitmq"}
+Messages For RabbitMQ
+
+	{: .navgroup id="learn"}
+	index.md
+	getting-started.md
+
+	{: .topicgroup}
+	The Service Dashboard
+		dashboard-overview.md
+		dashboard-backups.md
+		dashboard-settings.md
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	howto-provisioning.md
+	howto-admin-password.md
+	howto-getting-connection-strings.md
+	howto-using-ibmcloud-cli.md
+
+	{: .topicgroup}
+	Connecting to Messages for RabbitMQ
+		connecting-ibmcloud-app.md
+		connecting-external.md
+		connecting-cli-client.md
+	{: .navgroup-end}
+
+	{: .navgroup id="reference"}
+	reference-architecture.md
+	reference-versions.md
+	reference-security.md
+	reference-access-management.md
+	reference-activity-tracker.md
+	reference-key-protect.md
+	{: .navgroup-end}
