@@ -56,6 +56,7 @@ Specific guidance on connecting with RabbitMQ drivers is on the [Connecting Exte
 
 {{site.data.keyword.messages-for-rabbitmq}} deployments offer other cloud services integrations. 
 - View events with [Activity Tracker](./reference-activity-tracker.html)
+- Monitor deployment resource use with the [Monitoring](./reference-monitoring.html) service.
 - BYOK encryption is available if you use [Key Protect](./reference-key-protect.html)
 
 
