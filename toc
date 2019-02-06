@@ -19,6 +19,7 @@ Messages For RabbitMQ
 	howto-provisioning.md
 	howto-admin-password.md
 	howto-getting-connection-strings.md
+	howto-plugins.md
 	howto-using-ibmcloud-cli.md
 
 	{: .topicgroup}

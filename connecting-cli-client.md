@@ -14,9 +14,9 @@ lastupdated: "2018-11-09"
 
 # Connecting with the RabbitMQ Management Plugin
 
-{{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plugin enabled by default, which enables access to your RabbitMQ from a web browser or from a command-line client. 
+{{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plugin enabled by default, which enables access to your RabbitMQ from a web browser, API, or from the command-line. 
 
-## Connecting with a browser
+## RabbitMQ Management UI
 
 The URL connection information is in the "https" section of your [connection strings](./howto-getting-connection-strings.html). The table contains a breakdown for reference.
 
@@ -41,9 +41,23 @@ The web address for your RabbitMQ deployment is in the "composed" field of your 
 For example, `https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797`
 
 Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you will most likely get a security warning when you first try to open the page. You can use the browser to view the certificate information, verify that it is issued by {{site.data.keyword.databases-for}}, and add a security exception for the page.
+
 You are next asked to enter your username and password. After you have signed in, you can see an _Overview_ of your RabbitMQ deployment. 
 
+You can use any user that you have provisioned to access the UI. Some features may only be available to the admin user provisioned with your deployment.
+{: .tip} 
+
 Documentation can be found on the [RabbitMQ Management Plugin](https://www.rabbitmq.com/management.html) page.
+
+## RabbitMQ Management HTTP API
+
+The Management Plugin also provides an [API](https://www.rabbitmq.com/management.html#http-api) for your RabbitMQ deployment. The base endpoint the the same HTTP URL as the browser URL with `/api`. For example,
+`https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797/api/`
+
+The API uses `application/json` data and requires basic authentication. You can use any user that you have made on your deployment to access the UI. However, some features may only be available to the admin user.
+
+Documentation and examples are provided with your deployment at the browser URL with `/api/index.html`. For example,
+`https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797/api/index.html`
 
 ## Installing `rabbitmqadmin`
 
