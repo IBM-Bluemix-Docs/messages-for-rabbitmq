@@ -71,7 +71,7 @@ ibmcloud cdb deployment-connections example-deployment -u <newusername> --all
 If you don't specify a user, the `deployment-connections` commands return information for the admin user by default.
 {: .tip}
 
-### Generating _Service Credentials_ for existing users.
+### Generating _Service Credentials_ for existing users
 
 Creating a new user from the CLI doesn't automatically populate that user's connection strings into _Service Credentials_. If you want to add them there, you can create a new credential with the existing user information.
 

@@ -19,7 +19,6 @@ Messages For RabbitMQ
 	howto-provisioning.md
 	howto-admin-password.md
 	howto-getting-connection-strings.md
-	howto-plugins.md
 	howto-using-ibmcloud-cli.md
 
 	{: .topicgroup}
@@ -27,6 +26,11 @@ Messages For RabbitMQ
 		connecting-ibmcloud-app.md
 		connecting-external.md
 		connecting-cli-client.md
+
+	{: .topicgroup}
+	RabbitMQ Administration
+		howto-user-management.md
+		howto-plugins.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
