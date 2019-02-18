@@ -13,10 +13,11 @@ lastupdated: "2018-10-26"
 
 
 # Getting Connection Strings
+{: #connection-strings}
 
-In order to connect to {{site.data.keyword.messages-for-rabbitmq_full}}, you need database users and some connection strings. A {{site.data.keyword.messages-for-rabbitmq}} deployment is provisioned with an admin user, and after you [set the admin password](./howto-admin-password), you can use its connection strings to connect to your deployment.
+In order to connect to {{site.data.keyword.messages-for-rabbitmq_full}}, you need database users and some connection strings. A {{site.data.keyword.messages-for-rabbitmq}} deployment is provisioned with an admin user, and after you [set the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password), you can use its connection strings to connect to your deployment.
 
-The simplest way to retrieve connection information is from the [cloud databases plug-in](./howto-using-ibmcloud-cli.html). Use the `ibmcloud cdb deployment-connections` command to display a formatted connection URI for any user on your deployment. For example, to retrieve a connection string for the admin user on a deployment named  "example-rabbit", use the following command.
+The simplest way to retrieve connection information is from the [cloud databases plug-in](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference). Use the `ibmcloud cdb deployment-connections` command to display a formatted connection URI for any user on your deployment. For example, to retrieve a connection string for the admin user on a deployment named  "example-rabbit", use the following command.
 
 ```
 ibmcloud cdb deployment-connections example-rabbit -u admin
@@ -42,7 +43,7 @@ The new credentials appear in the table, and the connection strings are availabl
 
 ### Using Service IDs
 
-Because {{site.data.keyword.messages-for-rabbitmq}} is an IAM service, you can use [Service IDs](https://{DomainName}/docs/iam/serviceid.html#serviceids) to manage access to this service. For example, by using an IAM-managed Service ID, that user gets an RabbitMQ user and connection string in _Service Credentials_, and has API key access to the {{site.data.keyword.cloud_notm}} Databases API.  If you have a Service ID, enter its information under _Select Service ID_.
+Because {{site.data.keyword.messages-for-rabbitmq}} is an IAM service, you can use [Service IDs](/docs/iam?topic=iam-serviceids) to manage access to this service. For example, by using an IAM-managed Service ID, that user gets an RabbitMQ user and connection string in _Service Credentials_, and has API key access to the {{site.data.keyword.cloud_notm}} Databases API.  If you have a Service ID, enter its information under _Select Service ID_.
 
 ## Generating Connection Strings from the command-line
 
@@ -102,7 +103,7 @@ Field Name|Index|Description
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
-For more information on using this information to connect, see the [Connecting an External Application](./connecting-external.html) page.
+For more information on using this information to connect, see the [Connecting an External Application](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app) page.
 
 ### The CLI and https Sections
 
@@ -139,7 +140,7 @@ Field Name|Index|Description
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
-For more information on using this information, see the [Connecting with the RabbitMQ Management Plugin](./connecting-cli-client) page.
+For more information on using this information, see the [Connecting with the RabbitMQ Management Plugin](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) page.
 
 ## Generating Connection Strings via API
 

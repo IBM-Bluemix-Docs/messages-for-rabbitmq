@@ -7,6 +7,9 @@ Messages For RabbitMQ
 	{: .navgroup id="learn"}
 	index.md
 	getting-started.md
+	high-availability.md
+	security-compliance.md	
+	versioning.md
 
 	{: .topicgroup}
 	The Service Dashboard
@@ -19,7 +22,6 @@ Messages For RabbitMQ
 	howto-provisioning.md
 	howto-admin-password.md
 	howto-getting-connection-strings.md
-	howto-using-ibmcloud-cli.md
 
 	{: .topicgroup}
 	Connecting to Messages for RabbitMQ
@@ -34,9 +36,8 @@ Messages For RabbitMQ
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	reference-architecture.md
-	reference-versions.md
-	reference-security.md
+	[Cloud Databases CLI plugin](/databases-cli-plugin/cloud-databases-cli-cdb-reference)
+	[Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api)
 	reference-access-management.md
 	reference-activity-tracker.md
 	reference-monitoring.md

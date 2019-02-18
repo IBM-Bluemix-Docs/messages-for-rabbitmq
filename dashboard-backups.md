@@ -12,7 +12,7 @@ lastupdated: "2018-10-26"
 {:pre: .pre}
 
 # Backups
-{: #backups}
+{: #dashboard-backups}
 
 {{site.data.keyword.messages-for-rabbitmq_full}} backups are accessible from the _Backups_ tab of your service dashboard. Daily and on-demand backups are available for 30 days. Each backup is labeled with its type, and when the backup was taken. Click the backup to reveal the full ID of the backup and a command that you can use to restore a backup with the {{site.data.keyword.cloud_notm}} CLI.
 
@@ -50,7 +50,7 @@ The response is a table with backup `ID`, `Type`, `Status`, and `Created At` fie
 To see the details of one of the backups from the list, take the ID from the `ID` field of the table and use it with the `backup-show` command.
 
 ```
-ibmcloud cdb backup-show crn:v1:staging:public:databases-for-postgresql:us-south:a/6284014dd5b487c87a716f48aeeaf99f:3b4537bf-a585-4594-8262-2b1e24e2701e:backup:a3364821-d061-413f-a0df-6ba0e2951566
+ibmcloud cdb backup-show crn:v1:staging:public:messages-for-rabbitmq:us-south:a/6284014dd5b487c87a716f48aeeaf99f:3b4537bf-a585-4594-8262-2b1e24e2701e:backup:a3364821-d061-413f-a0df-6ba0e2951566
 ```
 {: codeblock}
 

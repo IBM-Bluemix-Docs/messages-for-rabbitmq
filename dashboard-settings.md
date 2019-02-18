@@ -13,6 +13,7 @@ lastupdated: "2018-10-26"
 {:tip: .tip}
 
 # Settings
+{: #dashboard-settings}
 
 Manage your {{site.data.keyword.messages-for-rabbitmq_full}} service through these available settings.
 

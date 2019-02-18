@@ -15,7 +15,7 @@ lastupdated: "2019-02-01"
 # RabbitMQ Plugins
 {: #plugins}
 
-RabbitMQ supports a variety of plugins to extend its core functionality. {{site.data.keyword.messages-for-rabbitmq_full}} comes with a selection of plugins already enabled on your deployment. Plugin management is currently handled by the {{site.data.keyword.messages-for-rabbitmq}} service. Users can not enable or disable plugins.
+RabbitMQ supports various plugins to extend its core functionality. {{site.data.keyword.messages-for-rabbitmq_full}} comes with a selection of plugins that are already enabled on your deployment. Plugin management is handled by the {{site.data.keyword.messages-for-rabbitmq}} service. Users can not enable or disable plugins.
 
 ## Shovel Plugin
 
@@ -25,7 +25,7 @@ The _Shovel Status_ and _Shovel Management_ links appear under the _Admin_ tab.
 
 ![Admin tab with the Shovel Plugin](images/plugins-shovel-ui.png)
 
-If you do not see the _Admin_ tab, you may need to log into the management UI with the [admin user](./howto-admin-password.html). 
+If you do not see the _Admin_ tab, you might need to log into the management UI with the [admin user](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password). 
 {: .tip}
 
 In the RabbitMQ Management API, the Shovel Management Plugin adds endpoints for listing, creating, and deleting shovels. Usage and examples are in the [github repository's documentation](https://github.com/rabbitmq/rabbitmq-shovel-management#usage).
@@ -38,4 +38,4 @@ To use the plugin, declare an exchange with the type `x-delayed-type`. To delay 
 
 ## RabbitMQ Management Plugin
 
-The Management Plugin provides access to your deployment through a web browser, `rabbitmqadmin` and through the RabbitMQ API. Information on using the Management Plugin to connect to your deployment in on the [Connecting with the RabbitMQ Management Plugin](./connecting-cli-client.html) page.
+The Management Plugin provides access to your deployment through a web browser, `rabbitmqadmin` and through the RabbitMQ API. Information on using the Management Plugin to connect to your deployment in on the [Connecting with the RabbitMQ Management Plugin](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) page.

@@ -13,12 +13,13 @@ lastupdated: "2018-11-09"
 
 
 # Connecting with the RabbitMQ Management Plugin
+{: #management-plugin}
 
 {{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plugin enabled by default, which enables access to your RabbitMQ from a web browser, API, or from the command-line. 
 
 ## RabbitMQ Management UI
 
-The URL connection information is in the "https" section of your [connection strings](./howto-getting-connection-strings.html). The table contains a breakdown for reference.
+The URL connection information is in the "https" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The table contains a breakdown for reference.
 
 Field Name|Index|Description
 ----------|-----|-----------
@@ -69,7 +70,7 @@ The `rabbitmqadmin` binary is available directly from your deployment. The downl
 
 ## Connecting with `rabbitmqadmin`
 
-The `rabbitmqadmin` connection information is in the "cli" section of your [connection strings](./howto-getting-connection-strings.html). The table contains a breakdown for reference.
+The `rabbitmqadmin` connection information is in the "cli" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The table contains a breakdown for reference.
 
 Field Name|Index|Description
 ----------|-----|-----------

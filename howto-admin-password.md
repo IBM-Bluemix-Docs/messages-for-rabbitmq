@@ -12,6 +12,7 @@ lastupdated: "2018-10-26"
 {:tip: .tip}
 
 # Setting the Admin Password
+{: #admin-password}
 
 The {{site.data.keyword.messages-for-rabbitmq_full}} service is provisioned with an admin user.
 
