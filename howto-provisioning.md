@@ -44,7 +44,7 @@ The database takes some time to deploy. The user is navigated back to the {{site
 
 ## Using the Command-Line
 
-The {{site.data.keyword.cloud_notm}} CLI tool is what you use to communicate with {{site.data.keyword.cloud_notm}} from your terminal or command-line. For more information, see [Download and install {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install_use).
+The {{site.data.keyword.cloud_notm}} CLI tool is what you use to communicate with {{site.data.keyword.cloud_notm}} from your terminal or command-line. For more information, see [Download and install {{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli).
 
 To create a {{site.data.keyword.messages-for-rabbitmq}} deployment, you use the CLI to request a service instance with a `dmessages-for-rabbitmq` service ID.
 
