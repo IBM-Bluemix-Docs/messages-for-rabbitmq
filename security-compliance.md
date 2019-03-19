@@ -3,6 +3,9 @@
 Copyright:
   years: 2018, 2019
 lastupdated: "2019-02-18"
+
+subcollection: messages-for-rabbitmq
+
 ---
 
 {:new_window: target="_blank"}
