@@ -108,6 +108,24 @@ Field Name|Index|Description
 
 For more information on using this information to connect, see the [Connecting an External Application](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app) page.
 
+### The `stomp_ssl` Section
+
+The "stomp_ssl" section contains the information that a STOMP client needs to connect to your deployment.
+
+Field Name|Index|Description
+----------|-----|-----------
+`Type`||Type of connection - for STOMP, it is "stomp"
+`Authentication`|`Username`|The username that you use to connect.
+`Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
+`Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the driver.
+`Hosts`|`0...`|A hostname and port to connect to, also contains the protocol name "stomp-ssl"
+`ssl`||The TLS/SSL setting needed for a connection. Should always be `true`.
+`Certificate`|`Name`|The allocated name for the self-signed certificate for database deployment
+`Certificate`|Base64|A base64 encoded version of the certificate.
+{: caption="Table 2. `RabbitMQ`/`stomp_ssl` connection information" caption-side="top"}
+
+* `0...` indicates that there might be one or more of these entries in an array.
+
 ### The CLI and https Sections
 
 The "CLI" section contains information that is suited for the management plugin and command-line clients that make connections to RabbitMQ.
@@ -121,7 +139,7 @@ Field Name|Index|Description
 `Certificate`|Base64|A self-signed certificate that is used to confirm that an application is connecting to the appropriate server. It is base64 encoded.
 `Certificate`|Name|The allocated name for the self-signed certificate.
 `Type`||The type of package that uses this connection information; in this case `cli`. 
-{: caption="Table 2. `rabbitmqadmin`/`cli` connection information" caption-side="top"}
+{: caption="Table 3. `rabbitmqadmin`/`cli` connection information" caption-side="top"}
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
@@ -139,7 +157,7 @@ Field Name|Index|Description
 `Composed`|`0...`|A URI combining Scheme, Authentication, Host, and Path
 `Certificate`|`Name`|The allocated name for the self-signed certificate for database deployment
 `Certificate`|Base64|A base64 encoded version of the certificate.
-{: caption="Table 3. `https`/`uri` connection information" caption-side="top"}
+{: caption="Table 4. `https`/`uri` connection information" caption-side="top"}
 
 * `0...` indicates that there might be one or more of these entries in an array.
 

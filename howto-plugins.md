@@ -39,6 +39,10 @@ The [delayed message plugin](https://github.com/rabbitmq/rabbitmq-delayed-messag
 
 To use the plugin, declare an exchange with the type `x-delayed-type`. To delay a message, publish it with the `x-delay` header with the number of milliseconds the message should be delayed. More detailed usage information is in the [plugin's documentation](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange#usage).
 
+## STOMP Plugin
+
+The [RabbitMQ STOMP Plugin](https://www.rabbitmq.com/stomp.html) provides support for sending [STOMP-formatted](http://stomp.github.io/) messages through RabbitMQ. The plugin exposes a port to handle STOMP traffic on your deployment, and it is TLS/SSL secured. The connection information for STOMP clients is in the `stomp_ssl` section of your deployment's [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#the-stomp_ssl-section).
+
 ## RabbitMQ Management Plugin
 
 The Management Plugin provides access to your deployment through a web browser, `rabbitmqadmin` and through the RabbitMQ API. Information on using the Management Plugin to connect to your deployment in on the [Connecting with the RabbitMQ Management Plugin](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) page.

@@ -58,19 +58,37 @@ Ruby|`Bunny`|[Link](http://rubybunny.info/)
 Python|`pika`|[Link](https://pika.readthedocs.io/en/0.10.0/index.html)
 {: caption="Table 2. Common RabbitMQ drivers" caption-side="top"}
 
-## Driver TLS and self-signed certificate support
+## Connecting with a STOMP client
 
-All connections to {{site.data.keyword.messages-for-rabbitmq}} are TLS 1.2 enabled, so the driver you use to connect needs to be able to support encryption. Your deployment also comes with a self-signed certificate so the driver can verify the server upon connection. 
+The information a STOMP client needs to make a connection to your deployment is in the "stomp_ssl" section of your connection strings. The table contains a breakdown for reference.
+
+Field Name|Index|Description
+----------|-----|-----------
+`Type`||Type of connection - for STOMP, it is "stomp"
+`Authentication`|`Username`|The username that you use to connect.
+`Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
+`Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the client.
+`Hosts`|`0...`|A hostname and the STOMP-enabled port to connect to, as well as the protocol name "stomp-ssl"
+`ssl`||The TLS/SSL setting needed for a connection. Should always be `true`.
+`Certificate`|`Name`|The allocated name for the self-signed certificate for database deployment
+`Certificate`|Base64|A base64 encoded version of the certificate.
+{: caption="Table 2. `RabbitMQ`/`stomp_ssl` connection information" caption-side="top"}
+
+* `0...` indicates that there might be one or more of these entries in an array.
+
+## TLS and self-signed certificate support
+
+All connections to {{site.data.keyword.messages-for-rabbitmq}} are TLS 1.2 enabled, so the driver or client you use to connect needs to be able to support encryption. Your deployment also comes with a self-signed certificate so the driver can verify the server upon connection. 
 
 ### Using the self-signed certificate
 
 1. Copy the certificate information from the Base64 field of the connection information. 
 2. Decode the Base64 string into text and save it to a file. (You can use the Name that is provided or your own file name).
-3. Provide the path to the driver.
+3. Provide the path to the driver or client.
 
 ### CLI plug-in support for the self-signed certificate
 
-You can display the decoded certificate for your deployment with the CLI plug-in with the command `ibmcloud cdb deployment-cacert "your-service-name"`. It decodes the base64 into text. Copy and save the command's output to a file and provide the file's path to the driver.
+You can display the decoded certificate for your deployment with the CLI plug-in with the command `ibmcloud cdb deployment-cacert "your-service-name"`. It decodes the base64 into text. Copy and save the command's output to a file and provide the file's path to the driver or client.
 
 
 
