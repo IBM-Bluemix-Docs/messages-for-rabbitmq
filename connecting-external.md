@@ -16,15 +16,9 @@ subcollection: messages-for-rabbitmq
 # Connecting an external application
 {: #external-app}
 
-Your applications and drivers use connection strings to make a connection to {{site.data.keyword.messages-for-rabbitmq_full}}. Each deployment has connection strings specifically for drivers and applications. 
+Your applications and drivers use connection strings to make a connection to {{site.data.keyword.messages-for-rabbitmq_full}}. Your deployment has connection strings specifically for drivers, clients, and applications. Connection strings are displayed in the _Connections_ panel of your deployment's _Overview_, and can also be retrieved from the [cloud databases CLI plugin](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployment-connections), and the [API](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
 
-## Getting Connection Strings
-
-The easiest way to get connection strings for an application is to create a set of _Service Credentials_ specifically for your application to connect with. Doing so also returns all the connection information as JSON in a click-to-copy field.
-
-Alternatively, the {{site.data.keyword.cloud_notm}} CLI [cloud databases plug-in](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-connection-strings-from-the-command-line) supports generating users and connection strings, as does the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.databases-for}} API](https://{DomainName}/apidocs/cloud-databases-api#creates-a-database-level-user).
-
-Full documentation on generating and retrieving connection strings is on the [Getting Connection Strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
+The connection strings can be used by any of the credentials you have created on your deployment. While you can use the admin user for all of your connections and applications, it might be better to generate credentials specifically for your applications to connect with. Documentation on generating credentials is on the [Getting Credentials and Connection Strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
 
 ## Connecting with a language's driver
 
@@ -82,9 +76,10 @@ All connections to {{site.data.keyword.messages-for-rabbitmq}} are TLS 1.2 enabl
 
 ### Using the self-signed certificate
 
-1. Copy the certificate information from the Base64 field of the connection information. 
-2. Decode the Base64 string into text and save it to a file. (You can use the Name that is provided or your own file name).
-3. Provide the path to the driver or client.
+1. Copy the certificate information from the _Connections_ panel or the Base64 field of the connection information. 
+2. If needed, decode the Base64 string into text. 
+3. Save the certificate  to a file. (You can use the Name that is provided or your own file name).
+4. Provide the path to the certificate to the driver or client.
 
 ### CLI plug-in support for the self-signed certificate
 
