@@ -40,6 +40,12 @@ They are also automatically tagged with the "monitoring" tag, allowing them user
 
 If you need users that are created from _Service Credentials_ to have more privileges, you can log in with the admin user and grant them.
 
+## Users created through the CLI and the API
+
+Users that you create through the Cloud Databases API and the CloudDatabases CLI are given the same permissions as _Service Credential_ users. They have full permissions on the default Virtual Host and are tagged with the "monitoring" tag. If you need them to have more privileges, you can grant them while logged in with the admin user.
+
+Users created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-connection-strings#generating-service-credentials-for-existing-users) if you choose.
+
 ## RabbitMQ Users
 
 You can bypass creating users in _Service Credentials_ and create users directly in RabbitMQ. The RabbitmQ Management Plugin UI has a tab for user creation and management available to the admin user on your deployment.
