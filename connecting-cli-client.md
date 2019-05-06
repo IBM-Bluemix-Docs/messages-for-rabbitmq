@@ -26,25 +26,7 @@ From the _Connections_ panel of your deployment's _Dashboard Overview_ there is 
 
 ![Link to open RabbitMQ Management UI](images/management_ui_launch_button.png)
 
-The URL connection information is also in the "https" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The table contains a breakdown for reference.
-
-Field Name|Index|Description
-----------|-----|-----------
-`Type`||Type of connection - for RabbitMQ, it is "uri"
-`Scheme`||Scheme for a URI - for RabbitMQ, it is "https"
-`Path`||Path for a uri
-`Authentication`|`Username`|The username that you use to connect.
-`Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
-`Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the driver.
-`Hosts`|`0...`|A hostname and port to connect to
-`Composed`|`0...`|A URI combining Scheme, Authentication, Host, and Path
-`Certificate`|`Name`|The allocated name for the self-signed certificate for database deployment
-`Certificate`|Base64|A base64 encoded version of the certificate.
-{: caption="Table 1. `https`/`uri` connection information" caption-side="top"}
-
-* `0...` indicates that there might be one or more of these entries in an array.
-
-The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
+The URL connection information is also in the "https" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
 
 Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you will most likely get a security warning when you first try to open the page. You can use the browser to view the certificate information, verify that it is issued by {{site.data.keyword.databases-for}}, and add a security exception for the page.
 
@@ -53,7 +35,7 @@ You are next asked to enter your username and password. After you have signed in
 You can use any user that you have provisioned to access the UI. Some features may only be available to the admin user provisioned with your deployment.
 {: .tip} 
 
-Documentation can be found on the [RabbitMQ Management Plugin](https://www.rabbitmq.com/management.html) page.
+General usage documentation can be found on the [RabbitMQ Management Plugin](https://www.rabbitmq.com/management.html) page.
 
 ## RabbitMQ Management HTTP API
 

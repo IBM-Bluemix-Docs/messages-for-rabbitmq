@@ -15,7 +15,7 @@ subcollection: messages-for-rabbitmq
 {:tip: .tip}
 
 
-# Managing Users
+# Managing Users and Permissions
 {: #user-management}
 
 {{site.data.keyword.messages-for-rabbitmq_full}} uses RabbitMQ's [built-in access control](https://www.rabbitmq.com/access-control.html#permissions). 

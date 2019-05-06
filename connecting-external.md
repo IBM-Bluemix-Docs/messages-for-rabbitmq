@@ -18,7 +18,7 @@ subcollection: messages-for-rabbitmq
 
 Your applications and drivers use connection strings to make a connection to {{site.data.keyword.messages-for-rabbitmq_full}}. Your deployment has connection strings specifically for drivers, clients, and applications. Connection strings are displayed in the _Connections_ panel of your deployment's _Overview_, and can also be retrieved from the [cloud databases CLI plugin](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployment-connections), and the [API](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
 
-The connection strings can be used by any of the credentials you have created on your deployment. While you can use the admin user for all of your connections and applications, it might be better to generate credentials specifically for your applications to connect with. Documentation on generating credentials is on the [Getting Credentials and Connection Strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
+The connection strings can be used by any of the credentials you have created on your deployment. While you can use the admin user for all of your connections and applications, it might be better to create users specifically for your applications to connect with. Documentation on creating users is on the [Creating Users and Getting Connection Strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
 
 ## Connecting with a language's driver
 
@@ -40,7 +40,10 @@ Field Name|Index|Description
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
-Many RabbitMQ drivers are able to make a connection to your deployment when given the URI-formatted connection string found in the "composed" field of the connection information. For example, `sample connection string goes here`
+Many RabbitMQ drivers are able to make a connection to your deployment when given the URI-formatted connection string found in the "composed" field of the connection information. For example,
+```
+amqps://$USERNAME:$PASSWORD@f08da56c-f975-4cad-98a5-633b8b5a8e79.974350db55ab4ec0983f023940bf637f.databases.appdomain.cloud:30402
+```
 
 The table covers a few of the common RabbitMQ drivers.
 

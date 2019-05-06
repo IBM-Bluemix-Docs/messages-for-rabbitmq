@@ -176,8 +176,6 @@ npm start
 
 The app is now running at http://localhost:8080. You can add words and definitions to your {{site.data.keyword.messages-for-rabbitmq}} database. When you stop and restart the app, any words you added are displayed when you refresh the page.
 
-For more information about the credentials you created for the application to connect to your service, see [Using Service Credentials](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/connecting-external.html#using-service-credentials).
-
 ## Next steps
 
 To understand more about how the [sample app](https://github.com/IBM-Cloud/clouddatabases-rabbitmq-helloworld-nodejs) works, you can read the application's readme file, or the code comments in `server.js`, which give some information about the app's functions.
@@ -186,7 +184,7 @@ To start exploring your {{site.data.keyword.messages-for-rabbitmq}} service, see
 
 - [Dashboard Overview](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/dashboard-overview.html)
 - [Backups](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/dashboard-backups.html)
-- [Settings](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/dashboard-settings.html)
+- [Creating Users and Getting Connection Strings](https://cloud.ibm.com/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)
 
 
 [ibm_cloud_signup_url]: https://ibm.biz/messages-for-rabbitmq-signup

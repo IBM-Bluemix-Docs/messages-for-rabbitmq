@@ -14,25 +14,26 @@ subcollection: messages-for-rabbitmq
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Architecture, Security, and Compliance
-{: #architecture-security-compliance}
+# Security and Compliance
+{: #security-compliance}
 
 ## Protection Against Unauthorized Access
 
 {{site.data.keyword.messages-for-rabbitmq_full}} use the following methods to protect data in transit or in storage.
 - All {{site.data.keyword.messages-for-rabbitmq}} connections use TLS/SSL encryption for data in transit. The current supported version of this encryption is TLS 1.2.
-- Access to the Account, Management Console UI, and API is secured via [Identity and Access Management (IAM)](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-iam).
+- Access to the Account, Management Console UI, and API is secured via [Identity and Access Management (IAM)](/docs/services/messages-for-rabbitmq?topic=cloud-databases-iam).
 - Access to the database is secured through the standard access controls provided by the database. These access controls are configured to require valid database-level credentials that are obtainable only through prior access to the database or through our Management Console UI or API.
-- All {{site.data.keyword.messages-for-rabbitmq}} storage for persistent messages is provided on block storage volumes encrypted with [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect?topic=key-protect-about). Bring-your-own-key (BYOK) for encryption is also available through [Key Protect integration](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-key-protect).
-- IP Whitelisting - All deployments support whitelisting IP addresses to restrict access to the service.
+- All {{site.data.keyword.messages-for-rabbitmq}} storage for persistent messages is provided on block storage volumes encrypted with [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect?topic=key-protect-about). Bring-your-own-key (BYOK) for encryption is also available through [Key Protect integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-key-protect).
+- IP Whitelisting - All deployments support [whitelisting IP addresses](/docs/services/messages-for-rabbitmq?topic=cloud-databases-whitelisting) to restrict access to the service.
+- Public and Private Networking - {{site.data.keyword.messages-for-rabbitmq}} is integrated with [Service Endpoints](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints). You can select whether to use connections over the public network, the {{site.data.keyword.cloud_notm}} internal network, or both.
 
 ## Data Resilience
 
-- Backups are included in the service. {{site.data.keyword.messages-for-rabbitmq}} backups reside in [{{site.data.keyword.cos_full_notm}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage) and are also [encrypted](/docs/services/cloud-object-storage?topic=cloud-object-storage-security).
+- [Backups](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-backups) are included in the service. {{site.data.keyword.messages-for-rabbitmq}} backups reside in [{{site.data.keyword.cos_full_notm}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage) and are also [encrypted](/docs/services/cloud-object-storage?topic=cloud-object-storage-security).
 - RabbitMQ backups contain only definitions, topology, and metadata. Messages are not stored in backups.
 - All {{site.data.keyword.messages-for-rabbitmq}} deployments are configured with replication. Deployments contain a cluster with three nodes where all three nodes are equal peers. Queues are mirrored on all three nodes.
-- If you deploy to an [{{site.data.keyword.cloud_notm}} datacenter](/docs/overview?topic=overview-data_center#data_center), your data has multiple copies and each copy resides on a different host. If you deploy to a [{{site.data.keyword.cloud_notm}} Global location](https://www.ibm.com/cloud/data-centers/), the cluster is spread over the region's availability zone locations. If one data member becomes unreachable, your cluster continues to operate normally.
-
+- If you deploy to an {{site.data.keyword.cloud_notm}} Single-Zone Region (SZR), each database node resides on a different host in the datacenter. 
+- If you deploy to an {{site.data.keyword.cloud_notm}} Multi-Zone Region (MZR), the nodes are spread over the region's availability zone locations.
 
 ## General Data Protection Regulation (GDPR) 
 

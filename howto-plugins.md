@@ -15,7 +15,7 @@ subcollection: messages-for-rabbitmq
 {:tip: .tip}
 
 
-# RabbitMQ Plugins
+# Using RabbitMQ Plugins
 {: #plugins}
 
 RabbitMQ supports various plugins to extend its core functionality. {{site.data.keyword.messages-for-rabbitmq_full}} comes with a selection of plugins that are already enabled on your deployment. Plugin management is handled by the {{site.data.keyword.messages-for-rabbitmq}} service. Users can not enable or disable plugins.

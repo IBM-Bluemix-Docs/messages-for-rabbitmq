@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017,2018
-lastupdated: "2018-10-26"
+  years: 2017,2019
+lastupdated: "2019-05-02"
 
 subcollection: messages-for-rabbitmq
 
@@ -15,25 +15,27 @@ subcollection: messages-for-rabbitmq
 {:tip: .tip}
 
 
-# Getting Credentials and Connection Strings
+# Creating Users and Getting Connection Strings
 {: #connection-strings}
 
-In order to connect to {{site.data.keyword.messages-for-rabbitmq_full}}, you need credentials and some connection strings. A {{site.data.keyword.messages-for-rabbitmq}} deployment is provisioned with an admin user, and after you [set the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password), you can use its credentials to connect to your deployment.
-
-Connection Strings for your deployment are displayed on the _Dashboard Overview_, in the _Connections_ panel. They can be used with any set of credentials that you generate.
+In order to connect to {{site.data.keyword.messages-for-rabbitmq_full}}, you need some users and some connection strings. Connection Strings for your deployment are displayed on the _Dashboard Overview_, in the _Connections_ panel.
 
 ![Connections panel on the Dashboard Overview](images/connections_panel.png)
 
 You can also grab connection strings from the [CLI](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployment-connections) and the [API](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
 
+A {{site.data.keyword.messages-for-rabbitmq}} deployment is provisioned with an admin user, and after you [set the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password), you can use its credentials to connect to your deployment.
+{: .tip}
+
 ## Credentials and Connection Strings for additional users
 
-Access to your {{site.data.keyword.messages-for-rabbitmq}} deployment is not just limited to the admin user. You can create additional users and retrieve connection strings specific to them by using the _Service Credentials_ panel, the {{site.data.keyword.IBM_notm}} CLI, or through the {{site.data.keyword.IBM_notm}} {{site.data.keyword.databases-for}} API. 
+Access to your {{site.data.keyword.messages-for-rabbitmq}} deployment is not limited to the root user. You can create users by using the _Service Credentials_ panel, the {{site.data.keyword.IBM_notm}} CLI, or through the {{site.data.keyword.IBM_notm}} {{site.data.keyword.databases-for}} API. 
+
+All users on your deployment can use the connection strings, including connection strings for either public or private endpoints.
 
 Not all users get the same privileges with respect to administering RabbitMQ. To read more about which users get what privileges see the [Managing Users](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-management) page.
-{: .tip} 
 
-## Getting Credentials and Connection Strings from _Service Credentials_
+### Creating Users and Getting Connection Strings in _Service Credentials_
 
 1. Navigate to the service dashboard for your service.
 2. Click _Service Credentials_ to open the _Service Credentials_ panel.
@@ -44,26 +46,22 @@ Not all users get the same privileges with respect to administering RabbitMQ. To
 
 The new credentials appear in the table, and the connection strings are available as JSON in a click-to-copy field under _View Credentials_.
 
-### Using Service IDs
+#### Using Service IDs
 
 Because {{site.data.keyword.messages-for-rabbitmq}} is an IAM service, you can use [Service IDs](/docs/iam?topic=iam-serviceids) to manage access to this service. For example, by using an IAM-managed Service ID, that user gets an RabbitMQ user and connection string in _Service Credentials_, and has API key access to the {{site.data.keyword.cloud_notm}} Databases API.  If you have a Service ID, enter its information under _Select Service ID_.
 
-## Getting Credentials and Connection Strings from the command-line
+### Creating Users and Getting Connection Strings from the command line
 
-If you manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [cloud databases plug-in](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference), you can generate a new user and connection strings with `cdb user-create`. For example, to create a new user for a deployment named "example-deployment", use the following command.
+If you manage your service through the {{site.data.keyword.cloud_notm}} CLI and the [cloud databases plug-in](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli), you can create a new user with `cdb user-create`. For example, to create a new user for an "example-deployment", use the following command.
 
 `ibmcloud cdb user-create example-deployment <newusername> <newpassword>`
 
-The response contains the task `ID`, `Deployment ID`, `Description`, `Created At`, `Status`, and `Progress Percentage` fields. The `Status` and `Progress Percentage` fields update when the task is complete.
+The response contains the task `ID`, `Deployment ID`, `Description`, `Created At`, `Status`, and `Progress Percentage` fields.  The `Status` and `Progress Percentage` fields update when the task is complete.
 
 Once the task has finished, you can retrieve the new user's connection strings with the `ibmcloud cdb deployment-connections` command.
 
 ```
 ibmcloud cdb deployment-connections example-deployment -u <newusername>
-```
-Or
-```
-ibmcloud cdb cxn example-deployment -u <newusername>
 ```
 
 Full connection information is returned by the `ibmcloud cdb deployment-connections` command with the `--all` flag. To retrieve all the connection information for a deployment named  "example-deployment", use the following command.
@@ -75,9 +73,24 @@ ibmcloud cdb deployment-connections example-deployment -u <newusername> --all
 If you don't specify a user, the `deployment-connections` commands return information for the admin user by default.
 {: .tip}
 
+### Creating Users and Getting Connection Strings from the API
+
+The _Foundation Endpoint_ that is shown on the _Overview_ panel of your service provides the base URL to access this deployment through the API. To create and manage users, use the base URL with the `/users` endpoint.
+```
+curl -X POST 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/users' \
+-H "Authorization: Bearer $APIKEY" \
+-H "Content-Type: application/json" \
+-d '{"username":"jane_smith", "password":"newsupersecurepassword"}'
+```
+
+To retrieve user's connection strings, use the base URL with the `/users/{userid}/connections` endpoint. You have to specify in the path which user and which type of endpoint (public or private) should be used in the returned connection strings. The user and endpoint type is not enforced. You can use any user on your deployment with either endpoint (if both exist on your deployment).
+```
+curl -X GET -H "Authorization: Bearer $APIKEY" 'https://api.{region}.databases.cloud.ibm.com/v4/ibm/deployments/{id}/users/{userid}/connections/{endpoint_type}'
+```
+
 ### Adding users to _Service Credentials_ 
 
-Creating a new user from the CLI doesn't automatically populate that user's connection strings into _Service Credentials_. If you want to add them there, you can create a new credential with the existing user information.
+Creating a new user from the CLI or API doesn't automatically populate that user's connection strings into _Service Credentials_. If you want to add them there, you can create a new credential with the existing user information.
 
 Enter the user name and password in the JSON field _Add Inline Configuration Parameters_, or specify a file where the JSON information is stored. For example, `{"existing_credentials":{"username":"Robert","password":"supersecure"}}`.
 
@@ -162,12 +175,6 @@ Field Name|Index|Description
 * `0...` indicates that there might be one or more of these entries in an array.
 
 For more information on using this information, see the [Connecting with the RabbitMQ Management Plugin](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) page.
-
-## Getting Credentials and Connection Strings through the API
-
-The _Foundation Endpoint_ that is shown on the _Overview_ panel of your service provides the base URL to access this deployment through the API. To create and manage users, use the base URL with the `/users` endpoint. Examples and documentation are available in the [API Reference](https://{DomainName}/apidocs/cloud-databases-api#creates-a-database-level-user).
-
-To retrieve user's connection strings, use the base URL with the `/users/{userid}/connections` endpoint. Examples and documentation are also available in the [API Reference](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
 
 
 

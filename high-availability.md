@@ -39,7 +39,7 @@ Several minutes of database unavailability or connection interruption is not exp
 
 ## Performance
 
-{{site.data.keyword.messages-for-rabbitmq}} deployments can be [scaled to your usage](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-settings#scaling-resources), but they do not auto-scale. There are a few factors to consider if you are concerned about the performance of your deployment.
+{{site.data.keyword.messages-for-rabbitmq}} deployments can be [scaled to your usage](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling), but they do not auto-scale. There are a few factors to consider if you are concerned about the performance of your deployment.
 
 ### Disk IOPS
 
@@ -51,7 +51,7 @@ By default, when the RabbitMQ server uses above 40% of the available RAM, it rai
 
 ### Monitoring your deployment
 
-You can use the [monitoring integration](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-monitoring), or you can [configure client notifications](https://www.rabbitmq.com/alarms.html) from RabbitMQ itself, to estimate typical resource usage, and scale your deployment accordingly.
+You can use the [monitoring integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-monitoring), or you can [configure client notifications](https://www.rabbitmq.com/alarms.html) from RabbitMQ itself, to estimate typical resource usage, and scale your deployment accordingly.
 
 If you are planning on running operations that might put a spike in the usual RAM usage, or an increase in IOPS, you can manually scale your service's resources up to avoid hitting limits that can affect deployment operations.
 
