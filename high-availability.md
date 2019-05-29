@@ -21,7 +21,7 @@ subcollection: messages-for-rabbitmq
 
 {{site.data.keyword.messages-for-rabbitmq}} provides replication, fail-over, and high-availability features to protect your databases and data from infrastructure maintenance, upgrades, and failures. Deployments contain a cluster with three nodes where all three nodes are equal peers. 
 
-The default virtual host is configured to mirror its queues across all nodes in the cluster to provide [high-availability](https://www.rabbitmq.com/ha.html). High-availability in RabbitMQ is set by [policy](https://www.rabbitmq.com/parameters.html#policies), and you can view the policy in the [RabbitMQ Management UI, the HTTPS API, or `rabbitmqadmin`](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) when you log in with the [admin account](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-mangement#the-admin-user).
+The default virtual host is configured to mirror its queues across all nodes in the cluster to provide [high-availability](https://www.rabbitmq.com/ha.html). High-availability in RabbitMQ is set by [policy](https://www.rabbitmq.com/parameters.html#policies), and you can view the policy in the [RabbitMQ Management UI, the HTTPS API, or `rabbitmqadmin`](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) when you log in with the [admin account](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-management#the-admin-user).
 
 ![RabbitMQ Policies Page](images/ha-policies.png)
 
@@ -51,7 +51,7 @@ By default, when the RabbitMQ server uses above 40% of the available RAM, it rai
 
 ### Monitoring your deployment
 
-You can use the [monitoring integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-monitoring), or you can [configure client notifications](https://www.rabbitmq.com/alarms.html) from RabbitMQ itself, to estimate typical resource usage, and scale your deployment accordingly.
+You can use the [monitoring integration](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-monitoring), or you can [configure client notifications](https://www.rabbitmq.com/alarms.html) from RabbitMQ itself, to estimate typical resource usage, and scale your deployment accordingly.
 
 If you are planning on running operations that might put a spike in the usual RAM usage, or an increase in IOPS, you can manually scale your service's resources up to avoid hitting limits that can affect deployment operations.
 
