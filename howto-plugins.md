@@ -22,7 +22,7 @@ RabbitMQ supports various plugins to extend its core functionality. {{site.data.
 
 ## Shovel Plugin
 
-{{site.data.keyword.messages-for-rabbitmq}} comes with the [Shovel Plugin](https://www.rabbitmq.com/shovel.html) and the [Shovel Management Plugin](https://github.com/rabbitmq/rabbitmq-shovel-management) enabled. You can configure the plugin through both the [RabbitMQ Management Plugin UI](./connecting-cli-client.html) and its accompanying API.
+{{site.data.keyword.messages-for-rabbitmq}} comes with the [Shovel Plugin](https://www.rabbitmq.com/shovel.html) and the [Shovel Management Plugin](https://github.com/rabbitmq/rabbitmq-shovel-management) enabled. You can configure the plugin through both the [RabbitMQ Management Plugin UI](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) and its accompanying API.
 
 The _Shovel Status_ and _Shovel Management_ links appear under the _Admin_ tab.
 

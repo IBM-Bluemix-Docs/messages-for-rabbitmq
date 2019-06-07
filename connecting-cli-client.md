@@ -18,28 +18,28 @@ subcollection: messages-for-rabbitmq
 # Connecting with the RabbitMQ Management Plugin
 {: #management-plugin}
 
-{{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plugin enabled by default, which enables access to your RabbitMQ from a web browser, API, or from the command-line. 
+{{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plugin enabled by default, which enables access to your RabbitMQ from a web browser, API, or from the command line. 
 
 ## RabbitMQ Management UI
 
-From the _Connections_ panel of your deployment's _Dashboard Overview_ there is a button to open RabbitMQ Management UI.
+From the _Connections_ panel of your deployment's _Dashboard Overview_, there is a button to open RabbitMQ Management UI.
 
 ![Link to open RabbitMQ Management UI](images/management_ui_launch_button.png)
 
 The URL connection information is also in the "https" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
 
-Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you will most likely get a security warning when you first try to open the page. You can use the browser to view the certificate information, verify that it is issued by {{site.data.keyword.databases-for}}, and add a security exception for the page.
+Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you might encounter a security warning when you first try to open the page. You can use the browser to view the certificate information, verify that it is issued by {{site.data.keyword.databases-for}}, and add a security exception for the page.
 
 You are next asked to enter your username and password. After you have signed in, you can see an _Overview_ of your RabbitMQ deployment. 
 
-You can use any user that you have provisioned to access the UI. Some features may only be available to the admin user provisioned with your deployment.
+You can use any user on your deployment to access the UI. Some features are only available to the admin user provisioned with your deployment.
 {: .tip} 
 
 General usage documentation can be found on the [RabbitMQ Management Plugin](https://www.rabbitmq.com/management.html) page.
 
 ## RabbitMQ Management HTTP API
 
-The Management Plugin also provides an [API](https://www.rabbitmq.com/management.html#http-api) for your RabbitMQ deployment. The base endpoint the the same HTTP URL as the browser URL with `/api`. For example,
+The Management Plugin also provides an [API](https://www.rabbitmq.com/management.html#http-api) for your RabbitMQ deployment. The base endpoint the same HTTP URL as the browser URL with `/api`. For example,
 `https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797/api/`
 
 The API uses `application/json` data and requires basic authentication. You can use any user that you have made on your deployment to access the UI. However, some features may only be available to the admin user.
@@ -78,13 +78,13 @@ The example command lists all the exchanges in your RabbitMQ.
 rabbitmqadmin --username=admin --password=$PASSWORD --ssl --ssl-ca-cert-file=0b22f14b-7ba2-11e8-b8e9-568642342d40 --host=1a619c43-6415-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud --port=31797 list exchanges
 ```
 
-* `rabbitmqadmin` : The command itself.
-* `--username` and `--password` : Authentication for the user that you are using to connect.
-* `--ssl` : ensures that the connection is TLS/SSL secured.
-* `--ssl-ca-cert-file=` : Path to the local copy of your certificate.
-* `--host=` : The parameter that specifies the endpoints where the `rabbitmqadmin` command connects.
-* `--port=` : The parameter that specifies the port the RabbitMQ server is listening on. 
-* `list exchanges` : A `rabbitmqadmin` command to list the database members of the RabbitMQ deployment. 
+* `rabbitmqadmin` - The command itself.
+* `--username` and `--password` - Authentication for the user that you are using to connect.
+* `--ssl` - ensures that the connection is TLS/SSL secured.
+* `--ssl-ca-cert-file=` - Path to the local copy of your certificate.
+* `--host=` - The parameter that specifies the endpoints where the `rabbitmqadmin` command connects.
+* `--port=` - The parameter that specifies the port the RabbitMQ server is listening on. 
+* `list exchanges` - A `rabbitmqadmin` command to list the database members of the RabbitMQ deployment. 
 
 Documentation and other examples for `rabbitmqadmin` are on the RabbitMQ [Management Command-Line Tool](https://www.rabbitmq.com/management-cli.html) page.
 
@@ -94,6 +94,4 @@ Documentation and other examples for `rabbitmqadmin` are on the RabbitMQ [Manage
 2. Decode the Base64 string into text and save it to a file. (You can use the Name that is provided or your own file name).
 3. Provide the path to the `--ssl-ca-cert-file` parameter.
 
-### CLI plug-in support for the self-signed certificate
-
-You can display the decoded certificate for your deployment with the CLI plug-in with the command `ibmcloud cdb deployment-cacert "your-service-name"`. It decodes the base64 into text. Copy and save the command's output to a file and provide the file's path to the `--ssl-ca-cert-file` parameter.
+You can also display the decoded certificate for your deployment with the CLI plug-in with the command `ibmcloud cdb deployment-cacert "your-service-name"`. It decodes the base64 into text. Copy and save the command's output to a file and provide the file's path to the `--ssl-ca-cert-file` parameter.

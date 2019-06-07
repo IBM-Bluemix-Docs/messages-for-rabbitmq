@@ -52,7 +52,7 @@ Language|Driver|Documentation
 Node|`amqplib`|[Link](https://www.npmjs.com/package/amqplib)
 Java|RabbitMQ Java Client Library|[Link](http://www.rabbitmq.com/java-client.html)
 Ruby|`Bunny`|[Link](http://rubybunny.info/)
-Python|`pika`|[Link](https://pika.readthedocs.io/en/0.10.0/index.html)
+Python|`pika`|[Link](https://pika.readthedocs.io/en/stable/)
 {: caption="Table 2. Common RabbitMQ drivers" caption-side="top"}
 
 ## Connecting with a STOMP client
