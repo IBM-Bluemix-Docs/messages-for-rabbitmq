@@ -37,7 +37,7 @@ More information on IAM roles and actions for the {{site.data.keyword.messages-f
 
 ## Using {{site.data.keyword.messages-for-rabbitmq}}
 
-{{site.data.keyword.messages-for-rabbitmq}} provides a UI, accessible by selecting _Manage_ from the left sidebar of your service and opening the management panel. You get a quick [Overview](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-overview) of your service as well as configuration settings on the [Settings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-overview#settings) tab and access to your backups on the [Backups](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-backups) tab.
+{{site.data.keyword.messages-for-rabbitmq}} provides a UI, accessible by selecting _Manage_ from the left sidebar of your service and opening the management panel. You get a quick [Overview](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-overview) of your service as well as configuration settings on the [Settings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-dashboard-overview#settings) tab and access to your backups on the [Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) tab.
 
 ### Using the {{site.data.keyword.cloud_notm}} command-line interface
 

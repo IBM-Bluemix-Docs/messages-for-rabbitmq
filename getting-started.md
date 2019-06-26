@@ -183,7 +183,7 @@ To understand more about how the [sample app](https://github.com/IBM-Cloud/cloud
 To start exploring your {{site.data.keyword.messages-for-rabbitmq}} service, see the following topics about the service dashboard:
 
 - [Dashboard Overview](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/dashboard-overview.html)
-- [Backups](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/dashboard-backups.html)
+- [Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups)
 - [Creating Users and Getting Connection Strings](https://cloud.ibm.com/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)
 
 
