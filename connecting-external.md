@@ -66,6 +66,7 @@ Field Name|Index|Description
 `Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
 `Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the client.
 `Hosts`|`0...`|A hostname and the STOMP-enabled port to connect to, as well as the protocol name "stomp-ssl"
+`Composed`|`0...`|A URI combining Authentication, Host, and TLS/SSL
 `ssl`||The TLS/SSL setting needed for a connection. Should always be `true`.
 `Certificate`|`Name`|The allocated name for the self-signed certificate for database deployment
 `Certificate`|Base64|A base64 encoded version of the certificate.
