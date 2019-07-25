@@ -4,6 +4,8 @@ Copyright:
   years: 2018, 2019
 lastupdated: "2019-03-28"
 
+keywords: rabbitmq, databases
+
 subcollection: messages-for-rabbitmq
 
 ---

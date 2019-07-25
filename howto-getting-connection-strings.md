@@ -3,6 +3,8 @@ copyright:
   years: 2017,2019
 lastupdated: "2019-05-02"
 
+keywords: rabbitmq, databases, connection strings
+
 subcollection: messages-for-rabbitmq
 
 ---
