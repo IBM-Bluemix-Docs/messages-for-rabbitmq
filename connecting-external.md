@@ -86,6 +86,7 @@ All connections to {{site.data.keyword.messages-for-rabbitmq}} are TLS 1.2 enabl
 2. If needed, decode the Base64 string into text. 
 3. Save the certificate  to a file. (You can use the Name that is provided or your own file name).
 4. Provide the path to the certificate to the driver or client.
+5. (optional) If your driver or client supports it you can add the certificate its (or your system's) certificate store.
 
 ### CLI plug-in support for the self-signed certificate
 
