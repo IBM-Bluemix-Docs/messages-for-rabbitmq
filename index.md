@@ -60,7 +60,8 @@ Specific guidance on connecting with RabbitMQ drivers is on the [Connecting Exte
 ## Other {{site.data.keyword.cloud_notm}} Integrations
 
 {{site.data.keyword.messages-for-rabbitmq}} deployments offer other cloud services integrations. 
-- View events with [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-activity-tracker)
+- View events with [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=cloud-databases-activity-tracker)
 - Monitor deployment resource use with the [Monitoring](/docs/services/messages-for-rabbitmq?topic=cloud-databases-monitoring) service.
+- View logs with the [{{site.data.keyword.la_full_notm}} integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-logging).
 - BYOK encryption is available if you use [Key Protect](/docs/services/messages-for-rabbitmq?topic=cloud-databases-key-protect)
 - [Service Endpoints Integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints) allows you to select public or private networking for your deployment at provision
