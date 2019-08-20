@@ -15,7 +15,7 @@ subcollection: messages-for-rabbitmq
 {:tip: .tip}
 
 
-# Getting Started
+# Getting Started Tutorial
 {: #getting-started}
 
 This tutorial uses a [sample app](https://github.com/IBM-Cloud/cloudmessages-rabbitmq-helloworld-nodejs) to demonstrate how to connect a Cloud Foundry application in {{site.data.keyword.cloud_notm}} to an {{site.data.keyword.messages-for-rabbitmq_full}} service. The application creates, reads from, and writes to a database that uses data that is supplied through the app's web interface.

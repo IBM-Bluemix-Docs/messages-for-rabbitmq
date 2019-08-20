@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="messages-for-rabbitmq" audience="service" category="databases" arm="4182633" href="/docs/services/messages-for-rabbitmq/index.html" path="services/messages-for-rabbitmq"}
+{: .toc subcollection="messages-for-rabbitmq" audience="service" category="databases" arm="4182633" href="/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started" path="services/messages-for-rabbitmq"}
 Messages For RabbitMQ
 
 	{: .navgroup id="learn"}
-	index.md
 	getting-started.md
+	[What is Messages for RabbitMQ?](https://www.ibm.com/cloud/messages-for-rabbitmq)
 
 	{: .topicgroup}
 	Service Overview
