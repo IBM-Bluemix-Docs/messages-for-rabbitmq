@@ -51,7 +51,7 @@ In the tab for _HTTPS_ connections there is a **Launch** button that will open t
 
 ## Security
 
-Encryption at rest is enabled for all {{site.data.keyword.messages-for-rabbitmq}} deployments. If you brought your own encryption key from [Key Protect](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-key-protect), the panel provides a link to your Key Protect instance and the _Encryption Key_ field has the name of the key.
+Encryption at rest is enabled for all {{site.data.keyword.messages-for-rabbitmq}} deployments. If you brought your own encryption key from [Key Protect](/docs/services/messages-for-rabbitmq?topic=cloud-databases-key-protect), the panel provides a link to your Key Protect instance and the _Encryption Key_ field has the name of the key.
 
 ## Instance Administration API
 

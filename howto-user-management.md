@@ -22,7 +22,7 @@ subcollection: messages-for-rabbitmq
 
 {{site.data.keyword.messages-for-rabbitmq_full}} uses RabbitMQ's [built-in access control](https://www.rabbitmq.com/access-control.html#permissions). 
 
-When you provision a new deployment in {{site.data.keyword.cloud_notm}}, you are automatically given an admin user to access and manage RabbitMQ. You can also add users in the _Service Credentials_ panel, which allows for access to RabbitMQ to be integrated with your {{site.data.keyword.cloud_notm}} account and [IAM](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-iam).
+When you provision a new deployment in {{site.data.keyword.cloud_notm}}, you are automatically given an admin user to access and manage RabbitMQ. You can also add users in the _Service Credentials_ panel, which allows for access to RabbitMQ to be integrated with your {{site.data.keyword.cloud_notm}} account and [IAM](/docs/services/messages-for-rabbitmq?topic=cloud-databases-iam).
 
 Since {{site.data.keyword.messages-for-rabbitmq}} comes with the RabbitMQ Management Plugin enabled, users' access is also controlled by [user tags](https://www.rabbitmq.com/management.html#permissions). These tags control what information is available to users through the management UI, `rabbitmqadmin`, and the RabbitMQ HTTP API.
 

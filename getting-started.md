@@ -178,7 +178,7 @@ The app is now running at http://localhost:8080. You can add words and definitio
 
 ## Next steps
 
-To understand more about how the [sample app](https://github.com/IBM-Cloud/clouddatabases-rabbitmq-helloworld-nodejs) works, you can read the application's readme file, or the code comments in `server.js`, which give some information about the app's functions.
+To understand more about how the [sample app](https://github.com/IBM-Cloud/cloudmessages-rabbitmq-helloworld-nodejs) works, you can read the application's readme file, or the code comments in `server.js`, which give some information about the app's functions.
 
 To start exploring your {{site.data.keyword.messages-for-rabbitmq}} service, see the following topics about the service dashboard:
 
