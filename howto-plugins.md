@@ -20,7 +20,7 @@ subcollection: messages-for-rabbitmq
 # Using RabbitMQ Plugins
 {: #plugins}
 
-RabbitMQ supports various plugins to extend its core functionality. {{site.data.keyword.messages-for-rabbitmq_full}} comes with a selection of plugins that are already enabled on your deployment. Plugin management is handled by the {{site.data.keyword.messages-for-rabbitmq}} service. Users can not enable or disable plugins.
+RabbitMQ supports various plugins to extend its core functionality. {{site.data.keyword.messages-for-rabbitmq_full}} comes with a selection of plugins that are already enabled on your deployment. Plugin management is handled by the {{site.data.keyword.messages-for-rabbitmq}} service. Users cannot enable or disable plugins.
 
 ## Shovel Plugin
 
@@ -39,7 +39,7 @@ In the RabbitMQ Management API, the Shovel Management Plugin adds endpoints for 
 
 The [delayed message plugin](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange) is a third-party plugin that adds delayed messaging and scheduled messaging to RabbitMQ. 
 
-To use the plugin, declare an exchange with the type `x-delayed-type`. To delay a message, publish it with the `x-delay` header with the number of milliseconds the message should be delayed. More detailed usage information is in the [plugin's documentation](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange#usage).
+To use the plugin, declare an exchange with the type `x-delayed-type`. To delay a message, publish it with the `x-delay` header with the number of milliseconds to delay the message. More detailed usage information is in the [plugin's documentation](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange#usage).
 
 ## STOMP Plugin
 

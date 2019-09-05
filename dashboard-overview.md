@@ -40,13 +40,13 @@ Every time that you make administrative changes to your service (such as scaling
 
 ## Connections
 
-The _Connections_ panel contains connection strings for your deployment. Each tab contains connection information tailored to the type of connection or the protocol that uses it. Basic information includes things like _hostname_ and _port_, as well as the TLS self-signed certificate and arguments that can be passed to the driver or binary that you are using to connect. 
+The _Connections_ panel contains connection strings for your deployment. Each tab contains connection information that is tailored to the type of connection or the protocol that uses it. Basic information includes things like _hostname_ and _port_, as well as the TLS self-signed certificate and arguments that can be passed to the driver or binary that you are using to connect. 
 
 Reference tables for the different connection types are available on the [Getting Connection Strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
 
 Connection strings reflect whether your deployment uses public endpoints, private endpoints or both. You can configure which endpoints are available on your deployment. For more information, see the [Service Endpoints Integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints) page.
 
-In the tab for _HTTPS_ connections there is a **Launch** button that will open the [RabbitMQ Management UI](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin).
+In the tab for _HTTPS_ connections, there is a **Launch** button that opens the [RabbitMQ Management UI](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin).
 {: .tip}
 
 ## Security
@@ -75,14 +75,14 @@ For more information about the {{{site.data.keyword.databases-for}} API, see the
 ## Settings
 
 The _Settings_ tab contains the UI for many of the tunable settings for your deployment. You can 
-- [scale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
-- [change the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password)
-- [configure public and private endpoints](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints)
-- [implement or modify an IP whitelist](/docs/services/messages-for-rabbitmq?topic=cloud-databases-whitelisting)
+- [Scale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
+- [Change the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password)
+- [Configure public and private endpoints](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints)
+- [Implement or modify an IP whitelist](/docs/services/messages-for-rabbitmq?topic=cloud-databases-whitelisting)
 
 ## Backups
 
-The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click on a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) page.
+The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) page.
 
 ## Docs
 

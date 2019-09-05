@@ -24,12 +24,12 @@ The connection strings can be used by any of the credentials you have created on
 
 ## Connecting with a language's driver
 
-The information a driver needs to make a connection to your deployment is in the "amqps" section of your connection strings. The table contains a breakdown for reference.
+The information a driver needs to make a connection to your deployment is in the `amqps` section of your connection strings. The table contains a breakdown for reference.
 
 Field Name|Index|Description
 ----------|-----|-----------
-`Type`||Type of connection - for RabbitMQ, it is "uri"
-`Scheme`||Scheme for a URI - for RabbitMQ, it is "amqps"
+`Type`||Type of connection - for RabbitMQ, it is `uri`
+`Scheme`||Scheme for a URI - for RabbitMQ, it is `amqps`
 `Path`||Path for a uri
 `Authentication`|`Username`|The username that you use to connect.
 `Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
@@ -57,13 +57,13 @@ Ruby|`Bunny`|[Link](http://rubybunny.info/)
 Python|`pika`|[Link](https://pika.readthedocs.io/en/stable/)
 {: caption="Table 2. Common RabbitMQ drivers" caption-side="top"}
 
-## Connecting with a STOMP client
+## Connecting with a `STOMP` client
 
-The information a STOMP client needs to make a connection to your deployment is in the "stomp_ssl" section of your connection strings. The table contains a breakdown for reference.
+The information a STOMP client needs to make a connection to your deployment is in the `stomp_ssl` section of your connection strings. The table contains a breakdown for reference.
 
 Field Name|Index|Description
 ----------|-----|-----------
-`Type`||Type of connection - for STOMP, it is "stomp"
+`Type`||Type of connection - for STOMP, it is `stomp`
 `Authentication`|`Username`|The username that you use to connect.
 `Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
 `Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the client.
@@ -76,16 +76,16 @@ Field Name|Index|Description
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
-## Connecting with an MQTT client
+## Connecting with an `MQTT` client
 
-The information that an MQTT client uses to connect can be found in the "mqtts" section of your connection strings. The table contains a reference.
+The information that an MQTT client uses to connect can be found in the `mqtts` section of your connection strings. The table contains a reference.
 
-The "mqtts" section contains the information that a MQTT client needs to connect to your deployment.
+The "mqtts" section contains the information that an MQTT client needs to connect to your deployment.
 
 Field Name|Index|Description
 ----------|-----|-----------
-`Type`||Type of connection - for `MQTTS` , it is "uri".
-`Scheme`|| Scheme for a URI - in this case it is "mqtts".
+`Type`||Type of connection - for `MQTTS`, it is `uri`.
+`Scheme`|| Scheme for a URI - in this case it is `mqtts`.
 `Authentication`|`Username`|The username that you use to connect.
 `Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
 `Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the driver.

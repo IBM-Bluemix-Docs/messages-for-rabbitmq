@@ -45,11 +45,11 @@ Several minutes of database unavailability or connection interruption are not ex
 
 ### Disk IOPS
 
-The number of Input-Output Operations per second (IOPS) is limited by the type of storage volume being used. Storage volumes for {{site.data.keyword.messages-for-rabbitmq}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/infrastructure/BlockStorage?topic=BlockStorage-About#provendurance). IOPS limits can affect RabbitMQ message throughput and storage operations, and hitting the limits can cause disk to fall behind on reclaiming space after messages are consumed, leading to publisher throttling until activity slows down. You can increase the number IOPS available to your deployment by increasing disk space.
+The number of Input-Output Operations per second (IOPS) is limited by the type of storage volume that is being used. Storage volumes for {{site.data.keyword.messages-for-rabbitmq}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/infrastructure/BlockStorage?topic=BlockStorage-About#provendurance). IOPS limits can affect RabbitMQ message throughput and storage operations, and hitting the limits can cause disk to fall behind on reclaiming space after messages are consumed, leading to publisher throttling until activity slows down. You can increase the number IOPS available to your deployment by increasing disk space.
 
 ### RabbitMQ Memory Alarms
 
-By default, when the RabbitMQ server uses above 40% of the available RAM, it raises a memory alarm and blocks all connections that are publishing messages. Once the memory alarm has cleared normal service resumes. Note that this does not prevent the RabbitMQ server from using more than 40% of the allocated memory, it is merely the point at which publishers are throttled. More information about RabbitMQ memory usage can be found in the [RabbitMQ documentation](https://www.rabbitmq.com/memory.html). You can scale the amount of memory available to your deployment.
+By default, when the RabbitMQ server uses above 40% of the available RAM, it raises a memory alarm and blocks all connections that are publishing messages. Once the memory alarm is cleared normal service resumes. Note that this does not prevent the RabbitMQ server from using more than 40% of the allocated memory, it is merely the point at which publishers are throttled. More information about RabbitMQ memory usage can be found in the [RabbitMQ documentation](https://www.rabbitmq.com/memory.html). You can scale the amount of memory available to your deployment.
 
 ### Monitoring your deployment
 
