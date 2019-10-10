@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-10-07"
 
 keywords: rabbitmq, databases
 
@@ -41,7 +41,10 @@ You cannot scale down storage. If your data set size has decreased, you can reco
 RabbitMQ throttles publishing when it detects it is using 40% of available memory to keep memory usage from growing uncontrollably during spike of activity. If you find that you regularly hit the limit, you can allocate more memory to your deployment. Adding memory to the total allocation adds memory to the members equally.
 
 **Dedicated Cores** - 
-If you provisioned your deployment with dedicated cores, you can increase the CPU allocation to the deployment. This option is not available on deployments that were not provisioned with an initial CPU allocation. 
+You can enable or increase the CPU allocation to the deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployment is then allocated the number of CPUs you specify. The default of 0 dedicated cores uses compute resources on shared hosts.
+
+A few scaling operations can be more long running than others. Enabling dedicated cores moves your deployment to its own host and can take longer than just adding more cores. Similarly, drastically increasing RAM or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
+{: .tip}
 
 ## Scaling via the UI
 
@@ -66,15 +69,22 @@ Count   3
 |   Step Size               384mb
 |   Adjustable              true
 |
++   CPU
+|   Allocation              0
+|   Allocation per member   0
+|   Minimum                 9
+|   Step Size               3
+|   Adjustable              true
+|
 +   Disk
 |   Allocation              3072mb
 |   Allocation per member   1024mb
-|   Minimum                 10240mb
+|   Minimum                 3072mb
 |   Step Size               3072mb
 |   Adjustable              true
 ```
 
-The deployment has three members, with 3072 MB of RAM and 15360 MB of disk allocated in total. The "per member" allocation is 1024 MB of RAM and 1024 MB of disk. The minimum value is the lowest the total allocation can be set. The step size is the smallest amount by which the total allocation can be adjusted.
+The deployment has three members, with 3072 MB of RAM disk allocated in total. The "per member" allocation is 1024 MB of RAM and 1024 MB of disk. The minimum value is the lowest the total allocation can be set. The step size is the smallest amount by which the total allocation can be adjusted.
 
 The `cdb deployment-groups-set` command allows either the total RAM or total disk allocation to be set, in MB. For example, to scale the memory of the "example-deployment" to 2048 MB of RAM for each memory member (for a total memory of 6144 MB), you use the command:  
 `ibmcloud cdb deployment-groups-set example-deployment member --memory 6144`
