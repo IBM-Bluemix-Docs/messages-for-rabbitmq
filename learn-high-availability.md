@@ -62,5 +62,5 @@ The RabbitMQ documentation provides an excellent [Reliability Guide](https://www
 
 ## SLA
 
-{{site.data.keyword.messages-for-rabbitmq}} deployments conform to the {{site.data.keyword.cloud_notm}} [SLA terms](/docs/overview?topic=overview-SLAs#SLAs).
+{{site.data.keyword.messages-for-rabbitmq}} deployments conform to the {{site.data.keyword.cloud_notm}} [SLA terms](/docs/overview?topic=overview-slas).
 
