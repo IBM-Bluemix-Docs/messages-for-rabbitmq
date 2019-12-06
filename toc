@@ -7,16 +7,11 @@ Messages For RabbitMQ
 	{: .navgroup id="learn"}
 	getting-started.md
 	[What is Messages for RabbitMQ?](https://www.ibm.com/cloud/messages-for-rabbitmq)
-
-	{: .topicgroup}
-	Service Overview
-		dashboard-overview.md
-		learn-high-availability.md
-		learn-performance.md
-		learn-security-compliance.md
-		learn-pricing.md
-
-	/cloud-databases/cloud-databases-tutorial-k8s-app
+	learn-dashboard-overview.md
+	learn-high-availability.md
+	learn-performance.md
+	learn-security-compliance.md
+	learn-pricing.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
@@ -35,6 +30,7 @@ Messages For RabbitMQ
 	/cloud-databases/cloud-databases-dashboard-backups
 	/cloud-databases/cloud-databases-whitelisting
 	howto-plugins.md
+	/cloud-databases/cloud-databases-tutorial-k8s-app
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
