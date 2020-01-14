@@ -70,7 +70,7 @@ The ID needs to be URL encoded to be used in an API call because the CRN include
 
 ### {{site.data.keyword.databases-for}} API Reference
 
-For more information about the {{{site.data.keyword.databases-for}} API, see the [API reference](https://{DomainName}/apidocs/cloud-databases-api) page.
+For more information about the {{site.data.keyword.databases-for}} API, see the [API reference](https://{DomainName}/apidocs/cloud-databases-api) page.
 
 ## Settings
 
