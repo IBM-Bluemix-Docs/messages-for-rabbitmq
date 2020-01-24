@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2018, 2019
-lastupdated: "2019-09-25"
+  years: 2018, 2019, 2020
+lastupdated: "2020-01-13"
 
 keywords: rabbitmq, databases
 
@@ -50,9 +50,9 @@ RabbitMQ and RabbitMQ drivers support a variety of features to help you design a
 
 Several minutes of database unavailability or connection interruption are not expected. Open a [support ticket](https://cloud.ibm.com/unifiedsupport/cases/add) with details if you have time periods longer than a minute with no connectivity so we can investigate.
 
-## Monitoring your Deployment
+## Monitoring for High-Availability
 
-{{site.data.keyword.databases-for-redis}} has [{{site.data.keyword.la_full_notm}} integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-logging) so that you can view live and historical logs.
+{{site.data.keyword.messages-for-rabbitmq}} has [{{site.data.keyword.la_full_notm}} integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-logging) so that you can view live and historical logs.
 
 Checking your deployment's logs helps you monitor the state of HA and replication for your deployment. If you are having persistent issues with your applications, logs can also provide insight to what is happening on your databases when you are experiencing connection failures or other disruptions.
 

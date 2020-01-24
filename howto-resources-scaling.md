@@ -1,10 +1,10 @@
 ---
 
 Copyright:
-  years: 2019
-lastupdated: "2019-10-07"
+  years: 2019, 2020
+lastupdated: "2020-01-22"
 
-keywords: rabbitmq, databases
+keywords: rabbitmq, databases, manual scaling, disk I/O, memory, CPU
 
 subcollection: messages-for-rabbitmq
 
@@ -17,10 +17,10 @@ subcollection: messages-for-rabbitmq
 {:pre: .pre}
 {:tip: .tip}
 
-# Managing Resources and Scaling
+# Scaling Disk, Memory, and CPU
 {: #resources-scaling}
 
-A visual representation of your data members and their resource allocation is available on the _Settings_ tab of your deployment's _Manage_ page. 
+A visual representation of your data members and their resource allocation is available on the _Resources_ tab of your deployment's _Manage_ page. 
 
 ![The Scale Resources Panel in _Settings_](images/settings-scaling.png)
 

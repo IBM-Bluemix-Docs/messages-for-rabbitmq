@@ -1,10 +1,10 @@
 ---
 
 Copyright:
-  years: 2018, 2019
-lastupdated: "2019-09-25"
+  years: 2018, 2019, 2020
+lastupdated: "2020-01-13"
 
-keywords: rabbitmq, databases
+keywords: rabbitmq, databases, memory alarms, disk alarms, monitoring, disk I/O
 
 subcollection: messages-for-rabbitmq
 
@@ -20,7 +20,11 @@ subcollection: messages-for-rabbitmq
 # Performance
 {: #performance}
 
-{{site.data.keyword.messages-for-rabbitmq}} deployments can be [scaled to your usage](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling), but they do not auto-scale. There are a few factors to consider if you are concerned about the performance of your deployment.
+{{site.data.keyword.messages-for-rabbitmq_full}} deployments can be both manually [scaled to your usage](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling), or configured to [autoscale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) under certain resource conditions. There are a few factors to consider if you are tuning the performance of your deployment.
+
+## Monitoring your deployment
+
+{{site.data.keyword.messages-for-rabbitmq}} deployments offer an integration with the [{{site.data.keyword.cloud_notm}} Monitoring service](/docs/services/messages-for-rabbitmq?topic=cloud-databases-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and IOPS, are presented to help you configure [autoscaling](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
 
 ## RabbitMQ Memory Usage
 
@@ -42,11 +46,7 @@ More information about memory alarms can be found in the [RabbitMQ documentation
 
 The number of Input-Output Operations per second (IOPS) is limited by the type of storage volume that is being used. Storage volumes for {{site.data.keyword.messages-for-rabbitmq}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/infrastructure/BlockStorage?topic=BlockStorage-About#provendurance). IOPS limits can affect RabbitMQ message throughput and storage operations, and hitting the limits can cause disk to fall behind on reclaiming space after messages are consumed, leading to disk alarms and publisher throttling until activity slows down. You can increase the number IOPS available to your deployment by increasing disk space.
 
-## Monitoring your deployment
-
-{{site.data.keyword.messages-for-rabbitmq}} deployments offer an integration with the [{{site.data.keyword.cloud_notm}} Monitoring service](/docs/services/messages-for-rabbitmq?topic=cloud-databases-monitoring) for basic monitoring of memory and disk usage on your deployment. You can also take advantage of the native RabbitMQ monitoring functions.
-
-### RabbitMQ Alarm Monitoring
+## RabbitMQ Alarm Monitoring
 
 When a disk or memory alarm is triggered, RabbitMQ emits a [`connection.blocked` notification](https://www.rabbitmq.com/connection-blocked.html) to publishing connections. Many drivers support the protocol necessary to catch the notification so you can design your application to respond to RabbitMQ alarms.
 
@@ -54,7 +54,7 @@ You can also monitor alarms from the [RabbitMQ HTTP API](/docs/services/messages
 
 For additional checks related to memory alarms, you can gather information related to a single node's memory using the `GET /api/nodes/{node}/memory` endpoint.
 
-### Standard Health Checks
+## Standard Health Checks
 
 The [RabbitMQ HTTP API](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin#rabbitmq-management-http-api) provides a couple of [health check](https://www.rabbitmq.com/monitoring.html#health-checks) endpoints that allow you to verify the state of the RabbitMQ nodes in your deployment. 
 

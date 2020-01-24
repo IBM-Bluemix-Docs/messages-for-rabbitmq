@@ -72,6 +72,17 @@ The ID needs to be URL encoded to be used in an API call because the CRN include
 
 For more information about the {{site.data.keyword.databases-for}} API, see the [API reference](https://{DomainName}/apidocs/cloud-databases-api) page.
 
+
+## Resources
+
+The resources tab contains information and configuration options on the size and resource usage of your deployment. You can 
+- [Scale disk, memory, and CPU](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
+- [Configure Autoscaling](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling)
+
+## Backups
+
+The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) page.
+
 ## Settings
 
 The _Settings_ tab contains the UI for many of the tunable settings for your deployment. You can 
@@ -79,10 +90,6 @@ The _Settings_ tab contains the UI for many of the tunable settings for your dep
 - [Change the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password)
 - [Configure public and private endpoints](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints)
 - [Implement or modify an IP whitelist](/docs/services/messages-for-rabbitmq?topic=cloud-databases-whitelisting)
-
-## Backups
-
-The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) page.
 
 ## Observability
 
