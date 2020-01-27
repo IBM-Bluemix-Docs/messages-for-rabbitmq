@@ -39,13 +39,24 @@ Disk - Disk autoscaling can scale when either disk usage reaches a certain thres
 
 The resource numbers refer to each database node in a deployment. For example, there are three members in a RabbitMQ cluster and if the deployment is scaled with 10GB of disk and 1GB of RAM, that means each member gets 10GB of disk and 1GB of RAM. The total resources added to your deployment is 30GB of disk and 3GB of RAM.
 
-Limits 
-- can't set anything to scale in an interval less than 60 seconds.
-- Maximum Disk = 4 TB per member
-- Maximum RAM = 112 GB per member
+## Scaling Considerations
 
-Autoscaling does not scale down deployments where disk or memory usage has shrunk. The RAM provisioned to your deployment remains for your future needs, or until you scale down your deployment manually. The disk provisioned to your deployment remains because disk can not be scaled down. 
-{: .tip}
+- Scaling your deployment up might cause your RabbitMQ to restart. If you scale RAM or CPU and your deployment needs to be moved to a host with more capacity, then RabbitMQ is restarted as part of the move.
+
+- Disk can not be scaled down.
+
+- A few scaling operations can be more long running than others. Drastically increasing RAM or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
+
+- Autoscaling operations are logged in [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
+
+- Limits
+  - can't set anything to scale in an interval less than 60 seconds.
+  - Maximum Disk = 4 TB per member
+  - Maximum RAM = 112 GB per member
+
+- Autoscaling does not scale down deployments where disk or memory usage has shrunk. The RAM provisioned to your deployment remains for your future needs, or until you scale down your deployment manually. The disk provisioned to your deployment remains because disk can not be scaled down.
+
+- If you just need to add resources to your deployment occasionally or rarely, you can [manually scale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling) your deployment.
 
 ## Configuring Autoscaling in the UI
 
