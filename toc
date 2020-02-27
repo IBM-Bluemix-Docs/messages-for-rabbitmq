@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="messages-for-rabbitmq" audience="service" category="databases" arm="4182633" href="/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started" path="services/messages-for-rabbitmq"}
+{: .toc subcollection="messages-for-rabbitmq" audience="service" category="databases" href="/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started" path="messages-for-rabbitmq"}
 Messages For RabbitMQ
 
 	{: .navgroup id="learn"}
