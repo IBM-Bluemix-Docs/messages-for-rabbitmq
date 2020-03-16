@@ -96,7 +96,7 @@ The _Settings_ tab contains the UI for many of the tunable settings for your dep
 The _Observability_ tab provides access to the IBM Cloud monitoring, logging, and event tracking integrations available for your deployment. 
 - [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=cloud-databases-activity-tracker)
 - [Logging](/docs/services/messages-for-rabbitmq?topic=cloud-databases-logging)
-- [Monitoring](/docs/services/messages-for-rabbitmq?topic=cloud-databases-monitoring)
+- [Monitoring](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring)
 
 ## Docs
 
