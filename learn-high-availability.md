@@ -33,6 +33,16 @@ The default virtual host is configured to mirror its queues across all nodes in 
 
 You can modify high-availability by adding a policy and setting it with a higher priority, but the default policy cannot be removed. Any additional virtual hosts do not have a high-availability policy set by default.  It is recommended that you to add a high-availability policy to all your virtual hosts.
 
+### Mirrored Queues
+
+In the default configuration uses [mirrored queues](https://www.rabbitmq.com/ha.html#what-is-mirroring), each queue has a master located on one member of the cluster and mirrors of the queues exist on the other members of the cluster. Messages published to the queue first go to the master and are then replicated to the mirrors. Something happens to the master node, the oldest synchronized mirror is promoted to master.
+
+### Quorum Queues
+
+Starting in RabbitMQ 3.8, high-availability can be managed with [quorum queues](https://www.rabbitmq.com/quorum-queues.html). Using quorum queues can significantly improve high-availability of a deployment, specifically in cases where queues exist long-term and their durability is more important than other features. Quorum queues manage high-availability by maintaining a quorum using the Raft Consensus Algorithm, and the current master and a majority of the replicas agree on the contents of the queue. If something happens to the master node, the replicas elect the next master.
+
+The RabbitMQ documentation covers the [use-cases](https://www.rabbitmq.com/quorum-queues.html#use-cases), as well as how to [implement quorum queues in your cluster](https://www.rabbitmq.com/quorum-queues.html#usage).
+
 ## High-Availability for your Application
 
 Applications that communicate over networks and cloud services are subject to transient connection failures. Also, because {{site.data.keyword.messages-for-rabbitmq}} is a managed service, regular updates and database maintenance occurs as part of normal operations. These operations can cause a short blip in connectivity, so you might also see a short connection interruption.
