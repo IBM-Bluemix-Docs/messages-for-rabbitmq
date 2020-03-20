@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="messages-for-rabbitmq" audience="service" category="databases" href="/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started" path="messages-for-rabbitmq"}
+{: .toc subcollection="messages-for-rabbitmq" audience="service" category="databases" href="/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started" console-page="/catalog/services/messages-for-rabbitmq" product-page="https://www.ibm.com/cloud/messages-for-rabbitmq" path="messages-for-rabbitmq"}
 Messages For RabbitMQ
 
 	{: .navgroup id="learn"}
 	getting-started.md
-	[What is Messages for RabbitMQ?](https://www.ibm.com/cloud/messages-for-rabbitmq)
+	[What are Message Queues?](https://www.ibm.com/cloud/learn/message-queues)
 	learn-dashboard-overview.md
 	learn-high-availability.md
 	learn-performance.md
