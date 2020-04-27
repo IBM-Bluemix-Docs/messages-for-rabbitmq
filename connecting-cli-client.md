@@ -28,9 +28,9 @@ From the _Connections_ panel of your deployment's _Dashboard Overview_, there is
 
 ![Link to open RabbitMQ Management UI](images/management_ui_launch_button.png)
 
-The URL connection information is also in the "https" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
+The URL connection information is also in the "https" section of your [connection strings](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
 
-Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you might encounter a security warning when you first try to open the page. You can add a security exception for the page through your browser, or configure your system to trust the [provided self-signed certificate](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app#tls-and-self-signed-certificate-support). You should consult your browser's or your system's documentation on how to do this.
+Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you might encounter a security warning when you first try to open the page. You can add a security exception for the page through your browser, or configure your system to trust the [provided self-signed certificate](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app#tls-and-self-signed-certificate-support). You should consult your browser's or your system's documentation on how to do this.
 
 You are next asked to enter your username and password. After you have signed in, you can see an _Overview_ of your RabbitMQ deployment. 
 
@@ -59,7 +59,7 @@ The `rabbitmqadmin` binary is available directly from your deployment. The downl
 
 ## Connecting with `rabbitmqadmin`
 
-The `rabbitmqadmin` connection information is in the "cli" section of your [connection strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The table contains a breakdown for reference.
+The `rabbitmqadmin` connection information is in the "cli" section of your [connection strings](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The table contains a breakdown for reference.
 
 Field Name|Index|Description
 ----------|-----|-----------

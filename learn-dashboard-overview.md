@@ -42,16 +42,16 @@ Every time that you make administrative changes to your service (such as scaling
 
 The _Connections_ panel contains connection strings for your deployment. Each tab contains connection information that is tailored to the type of connection or the protocol that uses it. Basic information includes things like _hostname_ and _port_, as well as the TLS self-signed certificate and arguments that can be passed to the driver or binary that you are using to connect. 
 
-Reference tables for the different connection types are available on the [Getting Connection Strings](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
+Reference tables for the different connection types are available on the [Getting Connection Strings](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings) page.
 
-Connection strings reflect whether your deployment uses public endpoints, private endpoints or both. You can configure which endpoints are available on your deployment. For more information, see the [Service Endpoints Integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints) page.
+Connection strings reflect whether your deployment uses public endpoints, private endpoints or both. You can configure which endpoints are available on your deployment. For more information, see the [Service Endpoints Integration](/docs/messages-for-rabbitmq?topic=cloud-databases-service-endpoints) page.
 
-In the tab for _HTTPS_ connections, there is a **Launch** button that opens the [RabbitMQ Management UI](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin).
+In the tab for _HTTPS_ connections, there is a **Launch** button that opens the [RabbitMQ Management UI](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin).
 {: .tip}
 
 ## Security
 
-Encryption at rest is enabled for all {{site.data.keyword.messages-for-rabbitmq}} deployments. If you brought your own encryption key from [Key Protect](/docs/services/messages-for-rabbitmq?topic=cloud-databases-key-protect), the panel provides a link to your Key Protect instance and the _Encryption Key_ field has the name of the key.
+Encryption at rest is enabled for all {{site.data.keyword.messages-for-rabbitmq}} deployments. If you brought your own encryption key from [Key Protect](/docs/messages-for-rabbitmq?topic=cloud-databases-key-protect), the panel provides a link to your Key Protect instance and the _Encryption Key_ field has the name of the key.
 
 ## Instance Administration API
 
@@ -76,27 +76,27 @@ For more information about the {{site.data.keyword.databases-for}} API, see the 
 ## Resources
 
 The resources tab contains information and configuration options on the size and resource usage of your deployment. You can 
-- [Scale disk, memory, and CPU](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
-- [Configure Autoscaling](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling)
+- [Scale disk, memory, and CPU](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
+- [Configure Autoscaling](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling)
 
 ## Backups
 
-The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) page.
+The _Backups_ tab is the UI for managing your deployments backups. All of the available backups are listed with their timestamps. Click a backup to grab its ID or to restore it into a new deployment. More information is on the [Managing Backups](/docs/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups) page.
 
 ## Settings
 
 The _Settings_ tab contains the UI for many of the tunable settings for your deployment. You can 
-- [Scale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
-- [Change the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password)
-- [Configure public and private endpoints](/docs/services/messages-for-rabbitmq?topic=cloud-databases-service-endpoints)
-- [Implement or modify an IP whitelist](/docs/services/messages-for-rabbitmq?topic=cloud-databases-whitelisting)
+- [Scale](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
+- [Change the admin password](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password)
+- [Configure public and private endpoints](/docs/messages-for-rabbitmq?topic=cloud-databases-service-endpoints)
+- [Implement or modify an IP whitelist](/docs/messages-for-rabbitmq?topic=cloud-databases-whitelisting)
 
 ## Observability
 
 The _Observability_ tab provides access to the IBM Cloud monitoring, logging, and event tracking integrations available for your deployment. 
-- [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=cloud-databases-activity-tracker)
-- [Logging](/docs/services/messages-for-rabbitmq?topic=cloud-databases-logging)
-- [Monitoring](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring)
+- [Activity Tracker](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker)
+- [Logging](/docs/messages-for-rabbitmq?topic=cloud-databases-logging)
+- [Monitoring](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring)
 
 ## Docs
 

@@ -21,7 +21,7 @@ subcollection: messages-for-rabbitmq
 This tutorial uses a [sample app](https://github.com/IBM-Cloud/clouddatabases-helloworld-cloudfoundry-examples/tree/node/rabbitmq) to demonstrate how to connect a Cloud Foundry application in {{site.data.keyword.cloud_notm}} to an {{site.data.keyword.messages-for-rabbitmq_full}} service. The application creates, reads from, and writes to a database that uses data that is supplied through the app's web interface.
 {: shortdesc}
 
-If you have already created your deployment and just want to connect to your RabbitMQ, you can skip to [getting your connection strings](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/howto-getting-connection-strings.html) and [connecting with the RabbitMQ Management Plugin](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/connecting-cli-client.html).
+If you have already created your deployment and just want to connect to your RabbitMQ, you can skip to [getting your connection strings](https://cloud.ibm.com/docs/messages-for-rabbitmq/howto-getting-connection-strings.html) and [connecting with the RabbitMQ Management Plugin](https://cloud.ibm.com/docs/messages-for-rabbitmq/connecting-cli-client.html).
 {: .tip}
 
 ## Before you begin
@@ -33,7 +33,7 @@ You also need to install [Node.js](https://nodejs.org/) and [Git](https://git-sc
 ## Step 1. Create a {{site.data.keyword.messages-for-rabbitmq}} service instance
 {: #create-service}
 
-You can create a {{site.data.keyword.messages-for-rabbitmq}} service from the [{{site.data.keyword.messages-for-rabbitmq}} page](https://cloud.ibm.com/catalog/services/messages-for-rabbitmq/) in the {{site.data.keyword.cloud_notm}} catalog.
+You can create a {{site.data.keyword.messages-for-rabbitmq}} service from the [{{site.data.keyword.messages-for-rabbitmq}} page](https://cloud.ibm.com/catalog/messages-for-rabbitmq/) in the {{site.data.keyword.cloud_notm}} catalog.
 
 Choose a service name, region, organization and space to provision the service in, and for the **Select a database version** field, choose _Latest Preferred Version_. In this example, the service name is "example-rabbitmq".
 
@@ -178,9 +178,9 @@ To understand more about how the [sample app](https://github.com/IBM-Cloud/cloud
 
 To start exploring your {{site.data.keyword.messages-for-rabbitmq}} service, see the following topics about the service dashboard:
 
-- [Dashboard Overview](https://cloud.ibm.com/docs/services/messages-for-rabbitmq/dashboard-overview.html)
-- [Backups](/docs/services/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups)
-- [Creating Users and Getting Connection Strings](https://cloud.ibm.com/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)
+- [Dashboard Overview](https://cloud.ibm.com/docs/messages-for-rabbitmq/dashboard-overview.html)
+- [Backups](/docs/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups)
+- [Creating Users and Getting Connection Strings](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)
 
 
 [ibm_cloud_signup_url]: https://ibm.biz/messages-for-rabbitmq-signup

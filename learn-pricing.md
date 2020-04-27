@@ -42,7 +42,7 @@ All prices here are in US dollars. To see pricing in your local currency, you ca
 
 ## Using the Pricing Calculator
 
-For pricing estimation, use the **Add to Estimate** button at the bottom of the [{{site.data.keyword.messages-for-rabbitmq}} catalog page](https://cloud.ibm.com/catalog/services/messages-for-rabbitmq). Input your total consumption across two data members into the calculator. For example, 1 GB of disk and 1 GB of RAM across three data members would be priced at 3 GB of disk and 3 GB of RAM respectively.
+For pricing estimation, use the **Add to Estimate** button at the bottom of the [{{site.data.keyword.messages-for-rabbitmq}} catalog page](https://cloud.ibm.com/catalog/messages-for-rabbitmq). Input your total consumption across two data members into the calculator. For example, 1 GB of disk and 1 GB of RAM across three data members would be priced at 3 GB of disk and 3 GB of RAM respectively.
 
 ![Pricing calculator estimation with 1 GB of disk and 1 GB of RAM, per member](images/pricing-calc.png)
 

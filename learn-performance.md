@@ -20,15 +20,15 @@ subcollection: messages-for-rabbitmq
 # Performance
 {: #performance}
 
-{{site.data.keyword.messages-for-rabbitmq_full}} deployments can be both manually [scaled to your usage](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling), or configured to [autoscale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) under certain resource conditions. There are a few factors to consider if you are tuning the performance of your deployment.
+{{site.data.keyword.messages-for-rabbitmq_full}} deployments can be both manually [scaled to your usage](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling), or configured to [autoscale](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) under certain resource conditions. There are a few factors to consider if you are tuning the performance of your deployment.
 
 ## Monitoring your deployment
 
-{{site.data.keyword.messages-for-rabbitmq}} deployments offer an integration with the [{{site.data.keyword.cloud_notm}} Monitoring service](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and IOPS, are presented to help you configure [autoscaling](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
+{{site.data.keyword.messages-for-rabbitmq}} deployments offer an integration with the [{{site.data.keyword.cloud_notm}} Monitoring service](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and IOPS, are presented to help you configure [autoscaling](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
 
 ## RabbitMQ Memory Usage
 
-[RabbitMQ provides a robust breakdown of memory usage](https://www.rabbitmq.com/memory-use.html#breakdown), which can provide you information on how memory resources are allocated and being used in your deployment. Most notably, connections, queue mirrors, and accumulated messages all use memory. If your use-case calls for many open connections at a time, you may want to look into increasing memory. Likewise, if you have queues that only contain transient messages that don't need replication, you can bring down memory usage by adjusting their [mirroring policy](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-high-availability#high-availability-queue-configuration). Be aware that changes to mirroring policy where messages have fewer or no mirrors can cause messages to be deleted on node restarts and those messages are gone forever.
+[RabbitMQ provides a robust breakdown of memory usage](https://www.rabbitmq.com/memory-use.html#breakdown), which can provide you information on how memory resources are allocated and being used in your deployment. Most notably, connections, queue mirrors, and accumulated messages all use memory. If your use-case calls for many open connections at a time, you may want to look into increasing memory. Likewise, if you have queues that only contain transient messages that don't need replication, you can bring down memory usage by adjusting their [mirroring policy](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-high-availability#high-availability-queue-configuration). Be aware that changes to mirroring policy where messages have fewer or no mirrors can cause messages to be deleted on node restarts and those messages are gone forever.
 
 Occasionally, RabbitMQ can experience memory spikes. Specifically with {{site.data.keyword.messages-for-rabbitmq}} deployments, updates and maintenance where we restart or delete a node causes memory usage to increase in order to resync the restarted or new node. If your RabbitMQ consistently uses a high percentage of its available memory, one of these spikes can run your deployment out of memory and cause it to crash. It is a good idea to scale your memory so that it can accommodate resyncing a node.
 
@@ -54,13 +54,13 @@ Starting in RabbitMQ 3.8, high-availability can be managed with [quorum queues](
 
 When a disk or memory alarm is triggered, RabbitMQ emits a [`connection.blocked` notification](https://www.rabbitmq.com/connection-blocked.html) to publishing connections. Many drivers support the protocol necessary to catch the notification so you can design your application to respond to RabbitMQ alarms.
 
-You can also monitor alarms from the [RabbitMQ HTTP API](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin#rabbitmq-management-http-api). Use the `GET /api/nodes` endpoints, and look for `mem_alarm` and `disk_free_alarm` in the response.
+You can also monitor alarms from the [RabbitMQ HTTP API](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin#rabbitmq-management-http-api). Use the `GET /api/nodes` endpoints, and look for `mem_alarm` and `disk_free_alarm` in the response.
 
 For additional checks related to memory alarms, you can gather information related to a single node's memory using the `GET /api/nodes/{node}/memory` endpoint.
 
 ## Standard Health Checks
 
-The [RabbitMQ HTTP API](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin#rabbitmq-management-http-api) provides a couple of [health check](https://www.rabbitmq.com/monitoring.html#health-checks) endpoints that allow you to verify the state of the RabbitMQ nodes in your deployment. 
+The [RabbitMQ HTTP API](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin#rabbitmq-management-http-api) provides a couple of [health check](https://www.rabbitmq.com/monitoring.html#health-checks) endpoints that allow you to verify the state of the RabbitMQ nodes in your deployment. 
 
 - [All Nodes](https://www.rabbitmq.com/monitoring.html#node-metrics) - `GET /api/healthcheck/node`
 - [Single Node](https://www.rabbitmq.com/monitoring.html#node-metrics) - `GET /api/healthcheck/node/<node_name>`

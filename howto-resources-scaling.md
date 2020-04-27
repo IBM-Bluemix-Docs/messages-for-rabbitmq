@@ -56,9 +56,9 @@ You can enable or increase the CPU allocation to the deployment. With dedicated 
 
 - A few scaling operations can be more long running than others. Enabling dedicated cores moves your deployment to its own host and can take longer than just adding more cores. Similarly, drastically increasing CPU, RAM, or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
 
-- Scaling operations are logged in [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
+- Scaling operations are logged in [Activity Tracker](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
 
-- If you find consistent trends in resource usage or would like to set up scaling when certain resource thresholds are reached, checkout enabling [autoscaling](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment.
+- If you find consistent trends in resource usage or would like to set up scaling when certain resource thresholds are reached, checkout enabling [autoscaling](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment.
 
 ## Scaling via the UI
 

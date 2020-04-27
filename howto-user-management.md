@@ -22,13 +22,13 @@ subcollection: messages-for-rabbitmq
 
 {{site.data.keyword.messages-for-rabbitmq_full}} uses RabbitMQ's [built-in access control](https://www.rabbitmq.com/access-control.html#permissions). 
 
-When you provision a new deployment in {{site.data.keyword.cloud_notm}}, you are automatically given an admin user to access and manage RabbitMQ. You can also add users in the _Service Credentials_ panel, which allows for access to RabbitMQ to be integrated with your {{site.data.keyword.cloud_notm}} account and [IAM](/docs/services/messages-for-rabbitmq?topic=cloud-databases-iam).
+When you provision a new deployment in {{site.data.keyword.cloud_notm}}, you are automatically given an admin user to access and manage RabbitMQ. You can also add users in the _Service Credentials_ panel, which allows for access to RabbitMQ to be integrated with your {{site.data.keyword.cloud_notm}} account and [IAM](/docs/messages-for-rabbitmq?topic=cloud-databases-iam).
 
 Since {{site.data.keyword.messages-for-rabbitmq}} comes with the RabbitMQ Management Plugin enabled, users' access is also controlled by [user tags](https://www.rabbitmq.com/management.html#permissions). These tags control what information is available to users through the management UI, `rabbitmqadmin`, and the RabbitMQ HTTP API.
 
 ## The admin user
 
-Every RabbitMQ deployment comes with an admin user. This admin user had full administrative privileges on your RabbitMQ deployment. Before you log in with the admin user, you need to [set its password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password).
+Every RabbitMQ deployment comes with an admin user. This admin user had full administrative privileges on your RabbitMQ deployment. Before you log in with the admin user, you need to [set its password](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password).
 
 The biggest difference between the admin user and any other users you add to your deployment is the ability to provision new vhosts and manage all other users' permissions and access. 
 
@@ -36,7 +36,7 @@ It is the only user that is initially granted access to all the settings and con
 
 ## _Service Credential_ Users
 
-Users that you [create through the _Service Credentials_ panel](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-connection-strings-from-service-credentials) are given full permissions to configure, write, and read on the default Virtual Host.  
+Users that you [create through the _Service Credentials_ panel](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-connection-strings-from-service-credentials) are given full permissions to configure, write, and read on the default Virtual Host.  
 
 They are also automatically tagged with the "monitoring" tag, allowing them users to access the management plugin and see all connections and channels as well as node-related information. These users given a limited view of the _Admin_ tab and the functions that are found there. 
 
@@ -46,13 +46,13 @@ If you need users that are created from _Service Credentials_ to have more privi
 
 Users that you create through the Cloud Databases API and the CloudDatabases CLI are given the same permissions as _Service Credential_ users. They have full permissions on the default Virtual Host and are tagged with the "monitoring" tag. If you need them to have more privileges, you can grant them while logged in with the admin user.
 
-Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-connection-strings#generating-service-credentials-for-existing-users) if you choose.
+Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](/docs/databases-for-postgresql?topic=databases-for-postgresql-connection-strings#generating-service-credentials-for-existing-users) if you choose.
 
 ## RabbitMQ Users
 
 You can bypass creating users in _Service Credentials_ and create users directly in RabbitMQ. The RabbitmQ Management Plugin UI has a tab for user creation and management available to the admin user on your deployment.
 
-Users created directly in RabbitMQ do not appear in _Service Credentials_, but you can [add them there](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-service-credentials-for-existing-users) if you choose. Note, that these users will not be integrated with IAM controls, even if added to _Service Credentials_.
+Users created directly in RabbitMQ do not appear in _Service Credentials_, but you can [add them there](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-service-credentials-for-existing-users) if you choose. Note, that these users will not be integrated with IAM controls, even if added to _Service Credentials_.
 
 ## The `ibm` user
 

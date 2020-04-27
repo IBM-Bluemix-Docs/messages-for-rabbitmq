@@ -21,7 +21,7 @@ subcollection: messages-for-rabbitmq
 # Autoscaling
 {: #autoscaling}
 
-Autoscaling is designed to respond to the short-to-medium term trends in resource usage on your {{site.data.keyword.messages-for-rabbitmq_full}} deployment. When enabled, your deployment is checked at the interval you specify. If it is running short on resources, more resources are added to the deployment. To keep an eye on your resources, use the [Monitoring integration](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring), which provides metrics for memory, disk space, and disk I/O utilization.
+Autoscaling is designed to respond to the short-to-medium term trends in resource usage on your {{site.data.keyword.messages-for-rabbitmq_full}} deployment. When enabled, your deployment is checked at the interval you specify. If it is running short on resources, more resources are added to the deployment. To keep an eye on your resources, use the [Monitoring integration](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring), which provides metrics for memory, disk space, and disk I/O utilization.
 
 You can set your deployment to autoscale disk, RAM, or both. 
 
@@ -47,7 +47,7 @@ The resource numbers refer to each database node in a deployment. For example, t
 
 - A few scaling operations can be more long running than others. Drastically increasing RAM or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
 
-- Autoscaling operations are logged in [Activity Tracker](/docs/services/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
+- Autoscaling operations are logged in [Activity Tracker](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
 
 - Limits
   - can't set anything to scale in an interval less than 60 seconds.
@@ -56,7 +56,7 @@ The resource numbers refer to each database node in a deployment. For example, t
 
 - Autoscaling does not scale down deployments where disk or memory usage has shrunk. The RAM provisioned to your deployment remains for your future needs, or until you scale down your deployment manually. The disk provisioned to your deployment remains because disk cannot be scaled down.
 
-- If you just need to add resources to your deployment occasionally or rarely, you can [manually scale](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling) your deployment.
+- If you just need to add resources to your deployment occasionally or rarely, you can [manually scale](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling) your deployment.
 
 ## Configuring Autoscaling in the UI
 

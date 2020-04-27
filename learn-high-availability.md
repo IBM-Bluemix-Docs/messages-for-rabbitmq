@@ -23,11 +23,11 @@ subcollection: messages-for-rabbitmq
 
 ## RabbitMQ Cluster Configuration
 
-{{site.data.keyword.messages-for-rabbitmq}} provides replication, fail-over, and high-availability features to protect your databases and data from infrastructure maintenance, upgrades, and failures. Deployments contain a cluster with three nodes where users, virtual hosts, queues, exchanges, bindings, runtime parameters and other distributed state are shared across all three nodes. In the case of a node failure, the node is either deleted or restarted, and then it or a new node is resynced to the cluster. Your deployment remains available to process messages during the resync, although it is a memory intensive process. You can learn more about memory management concerns on the [Performance](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-performance) page.
+{{site.data.keyword.messages-for-rabbitmq}} provides replication, fail-over, and high-availability features to protect your databases and data from infrastructure maintenance, upgrades, and failures. Deployments contain a cluster with three nodes where users, virtual hosts, queues, exchanges, bindings, runtime parameters and other distributed state are shared across all three nodes. In the case of a node failure, the node is either deleted or restarted, and then it or a new node is resynced to the cluster. Your deployment remains available to process messages during the resync, although it is a memory intensive process. You can learn more about memory management concerns on the [Performance](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-performance) page.
 
 ## High-Availability Queue Configuration
 
-The default virtual host is configured to mirror its queues across all nodes in the cluster to provide [high-availability](https://www.rabbitmq.com/ha.html). High-availability in RabbitMQ is set by [policy](https://www.rabbitmq.com/parameters.html#policies), and you can view the policy in the [RabbitMQ Management UI, the HTTPS API, or `rabbitmqadmin`](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) when you log in with the [admin account](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-management#the-admin-user).
+The default virtual host is configured to mirror its queues across all nodes in the cluster to provide [high-availability](https://www.rabbitmq.com/ha.html). High-availability in RabbitMQ is set by [policy](https://www.rabbitmq.com/parameters.html#policies), and you can view the policy in the [RabbitMQ Management UI, the HTTPS API, or `rabbitmqadmin`](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) when you log in with the [admin account](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-management#the-admin-user).
 
 ![RabbitMQ Policies Page](images/ha-policies.png)
 
@@ -62,7 +62,7 @@ Several minutes of database unavailability or connection interruption are not ex
 
 ## Monitoring for High-Availability
 
-{{site.data.keyword.messages-for-rabbitmq}} has [{{site.data.keyword.la_full_notm}} integration](/docs/services/messages-for-rabbitmq?topic=cloud-databases-logging) so that you can view live and historical logs.
+{{site.data.keyword.messages-for-rabbitmq}} has [{{site.data.keyword.la_full_notm}} integration](/docs/messages-for-rabbitmq?topic=cloud-databases-logging) so that you can view live and historical logs.
 
 Checking your deployment's logs helps you monitor the state of HA and replication for your deployment. If you are having persistent issues with your applications, logs can also provide insight to what is happening on your databases when you are experiencing connection failures or other disruptions.
 

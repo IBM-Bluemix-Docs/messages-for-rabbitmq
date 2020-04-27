@@ -26,7 +26,7 @@ In order to connect to {{site.data.keyword.messages-for-rabbitmq_full}}, you nee
 
 You can also grab connection strings from the [CLI](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployment-connections) and the [API](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026).
 
-A {{site.data.keyword.messages-for-rabbitmq}} deployment is provisioned with an admin user, and after you [set the admin password](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password), you can use its credentials to connect to your deployment.
+A {{site.data.keyword.messages-for-rabbitmq}} deployment is provisioned with an admin user, and after you [set the admin password](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password), you can use its credentials to connect to your deployment.
 {: .tip}
 
 ## Credentials and Connection Strings for additional users
@@ -35,7 +35,7 @@ Access to your {{site.data.keyword.messages-for-rabbitmq}} deployment is not lim
 
 All users on your deployment can use the connection strings, including connection strings for either public or private endpoints.
 
-Not all users get the same privileges with respect to administering RabbitMQ. To read more about which users get what privileges see the [Managing Users](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-management) page.
+Not all users get the same privileges with respect to administering RabbitMQ. To read more about which users get what privileges see the [Managing Users](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-user-management) page.
 
 ### From _Service Credentials_
 
@@ -113,7 +113,7 @@ Field Name|Index|Description
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
-For more information on using this information to connect, see the [Connecting an External Application](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app) page.
+For more information on using this information to connect, see the [Connecting an External Application](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app) page.
 
 ### The `stomp_ssl` Section
 
@@ -188,7 +188,7 @@ Field Name|Index|Description
 
 * `0...` indicates that there might be one or more of these entries in an array.
 
-For more information on using this information, see the [Connecting with the RabbitMQ Management Plugin](/docs/services/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) page.
+For more information on using this information, see the [Connecting with the RabbitMQ Management Plugin](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) page.
 
 
 
