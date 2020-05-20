@@ -22,7 +22,7 @@ subcollection: messages-for-rabbitmq
 
 Once a major version of a database is at its End Of Life (EOL), it is a good idea to upgrade to a current major version. 
 
-You can find the available versions of RabbitMQ on the [{{site.data.keyword.messages-for-rabbitmq_full}} the catalog](https://cloud.ibm.com/catalog/messages-for-rabbitmq) page, from the cloud databases cli plugin command [`ibmcloud cdb deployables-show`](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployables-show), or from the cloud databases API [`/deployables`](https://cloud.ibm.com/apidocs/cloud-databases-api#get-all-deployable-databases) endpoint.
+You can find the available versions of RabbitMQ on the [{{site.data.keyword.messages-for-rabbitmq_full}} the catalog](https://cloud.ibm.com/catalog/messages-for-rabbitmq) page, from the cloud databases cli plugin command [`ibmcloud cdb deployables-show`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployables-show), or from the cloud databases API [`/deployables`](https://cloud.ibm.com/apidocs/cloud-databases-api#get-all-deployable-databases) endpoint.
 
 Upgrading is handled through [restoring a backup](/docs/messages-for-rabbitmq?topic=cloud-databases-dashboard-backups#restoring-a-backup) of your data into a new deployment running the new version. Restoring from a backup has a number of advantages:
 

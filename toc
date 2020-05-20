@@ -39,7 +39,7 @@ Messages For RabbitMQ
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	[Cloud Databases CLI plugin](/databases-cli-plugin/cloud-databases-cli-cdb-reference)
+	[Cloud Databases CLI plugin](/databases-cli-plugin/databases-cli-plugin-cdb-reference)
 	[Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api)
 	/cloud-databases/cloud-databases-versioning-policy
 	reference-monitoring.md
