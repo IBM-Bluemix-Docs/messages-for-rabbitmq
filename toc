@@ -35,7 +35,10 @@ Messages For RabbitMQ
 	/cloud-databases/cloud-databases-whitelisting
 	howto-plugins.md
 	howto-upgrading.md
-	/cloud-databases/cloud-databases-tutorial-k8s-app
+	
+	{: .topicgroup}
+	Tutorials
+		/cloud-databases/cloud-databases-tutorial-k8s-app
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
