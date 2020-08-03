@@ -32,7 +32,7 @@ Messages For RabbitMQ
 		howto-autoscaling.md
 
 	/cloud-databases/cloud-databases-dashboard-backups
-	/cloud-databases/cloud-databases-whitelisting
+	/cloud-databases/cloud-databases-allowlisting
 	howto-plugins.md
 	howto-upgrading.md
 	

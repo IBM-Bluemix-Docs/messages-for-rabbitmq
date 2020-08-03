@@ -35,11 +35,11 @@ You can modify high-availability by adding a policy and setting it with a higher
 
 ### Mirrored Queues
 
-In the default configuration uses [mirrored queues](https://www.rabbitmq.com/ha.html#what-is-mirroring), each queue has a master located on one member of the cluster and mirrors of the queues exist on the other members of the cluster. Messages published to the queue first go to the master and are then replicated to the mirrors. Something happens to the master node, the oldest synchronized mirror is promoted to master.
+In the default configuration uses [mirrored queues](https://www.rabbitmq.com/ha.html#what-is-mirroring), each queue has a primary located on one member of the cluster and mirrors of the queues exist on the other members of the cluster. Messages published to the queue first go to the primary and are then replicated to the mirrors. Something happens to the primary node, the oldest synchronized mirror is promoted to primary.
 
 ### Quorum Queues
 
-Starting in RabbitMQ 3.8, high-availability can be managed with [quorum queues](https://www.rabbitmq.com/quorum-queues.html). Using quorum queues can significantly improve high-availability of a deployment, specifically in cases where queues exist long-term and their durability is more important than other features. Quorum queues manage high-availability by maintaining a quorum using the Raft Consensus Algorithm, and the current master and a majority of the replicas agree on the contents of the queue. If something happens to the master node, the replicas elect the next master.
+Starting in RabbitMQ 3.8, high-availability can be managed with [quorum queues](https://www.rabbitmq.com/quorum-queues.html). Using quorum queues can significantly improve high-availability of a deployment, specifically in cases where queues exist long-term and their durability is more important than other features. Quorum queues manage high-availability by maintaining a quorum using the Raft Consensus Algorithm, and the current primary and a majority of the replicas agree on the contents of the queue. If something happens to the primary node, the replicas elect the next primary.
 
 The RabbitMQ documentation covers the [use-cases](https://www.rabbitmq.com/quorum-queues.html#use-cases), as well as how to [implement quorum queues in your cluster](https://www.rabbitmq.com/quorum-queues.html#usage).
 

@@ -89,7 +89,7 @@ The _Settings_ tab contains the UI for many of the tunable settings for your dep
 - [Scale](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-resources-scaling)
 - [Change the admin password](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-admin-password)
 - [Configure public and private endpoints](/docs/messages-for-rabbitmq?topic=cloud-databases-service-endpoints)
-- [Implement or modify an IP whitelist](/docs/messages-for-rabbitmq?topic=cloud-databases-whitelisting)
+- [Implement or modify an IP allowlist](/docs/messages-for-rabbitmq?topic=cloud-databases-allowlisting)
 
 ## Observability
 
