@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017,2018
-lastupdated: "2018-11-09"
+  years: 2017,2020
+lastupdated: "2020-08-26"
 
 keywords: rabbitmq, databases
 
@@ -29,6 +29,18 @@ From the _Connections_ panel of your deployment's _Dashboard Overview_, there is
 ![Link to open RabbitMQ Management UI](images/management_ui_launch_button.png)
 
 The URL connection information is also in the "https" section of your [connection strings](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
+
+### HTTPS access
+
+{{site.data.keyword.messages-for-rabbitmq}} also offers both private and public cloud service endpoints. If you choose to enable *only* private endpoints, then you must take the following extra steps to access the management interface over HTTPS: 
+  
+* Ensure your Cloud IaaS / SL account is [enabled for private endpoints](https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview).
+* Create a virtual machine (VSI) that runs Linux
+* Configure a user account with SSH access
+* From your workstation, run `ssh -D 2345 user@vsi-host` This will start an SSH session and open a SOCKS proxy on port 2345 that forwards all traffic through the VSI
+* Configure your browser to use a SOCKS5 proxy on `localhost:2345`
+* From your browser, navigate to the {{site.data.keyword.messages-for-rabbitmq}} management endpoint URL. For example: `https://bfdb-4263-8ad2-c9a4beaf4591.8f7bfc8f3faa4218afd56e0.databases.appdomain.cloud:323232`
+
 
 Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you might encounter a security warning when you first try to open the page. You can add a security exception for the page through your browser, or configure your system to trust the [provided self-signed certificate](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app#tls-and-self-signed-certificate-support). You should consult your browser's or your system's documentation on how to do this.
 
