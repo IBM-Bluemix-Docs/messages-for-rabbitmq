@@ -42,14 +42,9 @@ General usage documentation can be found on the [RabbitMQ Management plug-in](ht
 ### Connecting through private endpoints
 {: #private-endpoints}
 
-{{site.data.keyword.messages-for-rabbitmq}} also offers both private and public cloud service endpoints. If you want to access the Management UI from a browser that is not on the private network, you must take these additional steps: 
-  
-* Ensure your Cloud IaaS / SL account is [enabled for private endpoints](https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview).
-* Create a virtual machine (VSI) that runs Linux
-* Configure a user account with SSH access
-* From your workstation, run `ssh -D 2345 user@vsi-host` This starts an SSH session and open a SOCKS proxy on port 2345 that forwards all traffic through the VSI
-* Configure your browser to use a SOCKS5 proxy on `localhost:2345`
-* From your browser, navigate to the {{site.data.keyword.messages-for-rabbitmq}} management endpoint URL. For example, `https://bfdb-4263-8ad2-c9a4beaf4591.8f7bfc8f3faa4218afd56e0.databases.appdomain.cloud:323232`
+{{site.data.keyword.messages-for-rabbitmq}} also offers both private and public cloud service endpoints. If you want to access the Management UI from a browser that is not on the private network, you must take these additional steps as listed in the [Connecting Through Private Endpoints](/docs/messages-for-rabbitmq?topic=cloud-databases-service-endpoints##private-endpoint-connections) documentation for {{site.data.keyword.cloud}} Databases.
+
+After you have configured your environment for private endpoint access, you can navigate to the {{site.data.keyword.messages-for-rabbitmq}} management endpoint URL from your browser. For example, `https://bfdb-4263-8ad2-c9a4beaf4591.8f7bfc8f3faa4218afd56e0.databases.appdomain.cloud:323232`
 
 ## RabbitMQ Management HTTP API
 
