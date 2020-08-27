@@ -17,53 +17,53 @@ subcollection: messages-for-rabbitmq
 {:tip: .tip}
 
 
-# Connecting with the RabbitMQ Management Plugin
+# Connecting with the RabbitMQ Management Plug-in
 {: #management-plugin}
 
-{{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plugin enabled by default, which enables access to your RabbitMQ from a web browser, API, or from the command line. 
+{{site.data.keyword.messages-for-rabbitmq_full}} deployments have the RabbitMQ management plug-in enabled by default, which enables access to your RabbitMQ from a web browser, API, or from the command line. 
 
 ## RabbitMQ Management UI
 
-From the _Connections_ panel of your deployment's _Dashboard Overview_, there is a button to open RabbitMQ Management UI.
+From the _Connections_ pane of your deployment's _Dashboard Overview_, there is a button to open RabbitMQ Management UI.
 
 ![Link to open RabbitMQ Management UI](images/management_ui_launch_button.png)
 
 The URL connection information is also in the "https" section of your [connection strings](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings). The web address for your RabbitMQ deployment is in the "composed" field of your connection strings.
 
-### HTTPS access
-
-{{site.data.keyword.messages-for-rabbitmq}} also offers both private and public cloud service endpoints. If you choose to enable *only* private endpoints, then you must take the following extra steps to access the management interface over HTTPS: 
-  
-* Ensure your Cloud IaaS / SL account is [enabled for private endpoints](https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview).
-* Create a virtual machine (VSI) that runs Linux
-* Configure a user account with SSH access
-* From your workstation, run `ssh -D 2345 user@vsi-host` This will start an SSH session and open a SOCKS proxy on port 2345 that forwards all traffic through the VSI
-* Configure your browser to use a SOCKS5 proxy on `localhost:2345`
-* From your browser, navigate to the {{site.data.keyword.messages-for-rabbitmq}} management endpoint URL. For example: `https://bfdb-4263-8ad2-c9a4beaf4591.8f7bfc8f3faa4218afd56e0.databases.appdomain.cloud:323232`
-
-
-Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you might encounter a security warning when you first try to open the page. You can add a security exception for the page through your browser, or configure your system to trust the [provided self-signed certificate](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app#tls-and-self-signed-certificate-support). You should consult your browser's or your system's documentation on how to do this.
+Since {{site.data.keyword.messages-for-rabbitmq}} deployments are signed with a self-signed certificate, you might encounter a security warning when you first try to open the page. You can configure your system to trust the [provided self-signed certificate](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-external-app#tls-and-self-signed-certificate-support). Review your browser's or your system's documentation on how to do this.
 
 You are next asked to enter your username and password. After you have signed in, you can see an _Overview_ of your RabbitMQ deployment. 
 
 You can use any user on your deployment to access the UI. Some features are only available to the admin user provisioned with your deployment.
 {: .tip} 
 
-General usage documentation can be found on the [RabbitMQ Management Plugin](https://www.rabbitmq.com/management.html) page.
+General usage documentation can be found on the [RabbitMQ Management plug-in](https://www.rabbitmq.com/management.html) page.
+
+### Connecting through private endpoints
+{: #private-endpoints}
+
+{{site.data.keyword.messages-for-rabbitmq}} also offers both private and public cloud service endpoints. If you want to access the Management UI from a browser that is not on the private network, you must take these additional steps: 
+  
+* Ensure your Cloud IaaS / SL account is [enabled for private endpoints](https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview).
+* Create a virtual machine (VSI) that runs Linux
+* Configure a user account with SSH access
+* From your workstation, run `ssh -D 2345 user@vsi-host` This starts an SSH session and open a SOCKS proxy on port 2345 that forwards all traffic through the VSI
+* Configure your browser to use a SOCKS5 proxy on `localhost:2345`
+* From your browser, navigate to the {{site.data.keyword.messages-for-rabbitmq}} management endpoint URL. For example, `https://bfdb-4263-8ad2-c9a4beaf4591.8f7bfc8f3faa4218afd56e0.databases.appdomain.cloud:323232`
 
 ## RabbitMQ Management HTTP API
 
-The Management Plugin also provides an [API](https://www.rabbitmq.com/management.html#http-api) for your RabbitMQ deployment. The base endpoint the same HTTP URL as the browser URL with `/api`. For example,
+The Management plug-in also provides an [API](https://www.rabbitmq.com/management.html#http-api) for your RabbitMQ deployment. The base endpoint the same HTTP URL as the browser URL with `/api`. For example,
 `https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797/api/`
 
-The API uses `application/json` data and requires basic authentication. You can use any user that you have made on your deployment to access the UI. However, some features may only be available to the admin user.
+The API uses `application/json` data and requires basic authentication. You can use any user that you created on your deployment to access the UI. However, some features might only be available to the admin user.
 
 Documentation and examples are provided with your deployment at the browser URL with `/api/index.html`. For example,
 `https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797/api/index.html`
 
 ## Installing `rabbitmqadmin`
 
-The `rabbitmqadmin` binary is available directly from your deployment. The download and installation instructions are found on `/cli` page of the management plugin. For example,
+The `rabbitmqadmin` binary is available directly from your deployment. The download and installation instructions are found on `/cli` page of the management plug-in. For example,
 `https://1a619c43-6425-4abb-8df0-0c7b1b3a3001.8f7bfd8f3faa4218aec56e069eb46187.databases.appdomain.cloud:31797/cli`
 
 `rabbitmqadmin` is also available with a full, local installation of the RabbitMQ package. However, if the version of the package you download doesn't match the deployment's RabbitMQ version, it might not connect.
@@ -77,7 +77,7 @@ Field Name|Index|Description
 ----------|-----|-----------
 `Bin`||The recommended binary to create a connection; in this case it is `rabbitmqadmin`.
 `Composed`||A formatted command to establish a connection to your deployment. The command combines the `Bin` executable, `Environment` variable settings, and uses `Arguments` as command-line parameters.
-`Environment`||A list of key/values you set as environment variables.
+`Environment`||A list of keys or values you set as environment variables.
 `Arguments`|0...|The information that is passed as arguments to the command shown in the Bin field.
 `Certificate`|Base64|A self-signed certificate that is used to confirm that an application is connecting to the appropriate server. It is base64 encoded.
 `Certificate`|Name|The allocated name for the self-signed certificate.
