@@ -170,7 +170,7 @@ Now start the local server.
 npm start
 ```
 
-The app is now running at http://localhost:8080. You can add words and definitions to your {{site.data.keyword.messages-for-rabbitmq}} database. When you stop and restart the app, any words you added are displayed when you refresh the page.
+The app is now running at `http://localhost:8080`. You can add words and definitions to your {{site.data.keyword.messages-for-rabbitmq}} database. When you stop and restart the app, any words you added are displayed when you refresh the page.
 
 ## Next steps
 

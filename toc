@@ -19,6 +19,7 @@ Messages For RabbitMQ
 	howto-admin-password.md
 	howto-getting-connection-strings.md
 	howto-user-management.md
+	/cloud-databases/cloud-databases-deprovisioning
 
 	{: .topicgroup}
 	Connecting to Messages for RabbitMQ

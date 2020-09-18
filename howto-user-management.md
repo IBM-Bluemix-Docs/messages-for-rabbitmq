@@ -36,7 +36,7 @@ It is the only user that is initially granted access to all the settings and con
 
 ## _Service Credential_ Users
 
-Users that you [create through the _Service Credentials_ panel](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-connection-strings-from-service-credentials) are given full permissions to configure, write, and read on the default Virtual Host.  
+Users that you [create through the _Service Credentials_ panel](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#from-_service-credentials_) are given full permissions to configure, write, and read on the default Virtual Host.  
 
 They are also automatically tagged with the "monitoring" tag, allowing them users to access the management plugin and see all connections and channels as well as node-related information. These users given a limited view of the _Admin_ tab and the functions that are found there. 
 
@@ -46,13 +46,13 @@ If you need users that are created from _Service Credentials_ to have more privi
 
 Users that you create through the Cloud Databases API and the CloudDatabases CLI are given the same permissions as _Service Credential_ users. They have full permissions on the default Virtual Host and are tagged with the "monitoring" tag. If you need them to have more privileges, you can grant them while logged in with the admin user.
 
-Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](/docs/databases-for-postgresql?topic=databases-for-postgresql-connection-strings#generating-service-credentials-for-existing-users) if you choose.
+Users that are created directly from the API and CLI do not appear in _Service Credentials_, but you can [add them](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#adding-users-to-_service-credentials_) if you choose.
 
 ## RabbitMQ Users
 
 You can bypass creating users in _Service Credentials_ and create users directly in RabbitMQ. The RabbitmQ Management Plugin UI has a tab for user creation and management available to the admin user on your deployment.
 
-Users created directly in RabbitMQ do not appear in _Service Credentials_, but you can [add them there](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#generating-service-credentials-for-existing-users) if you choose. Note, that these users will not be integrated with IAM controls, even if added to _Service Credentials_.
+Users created directly in RabbitMQ do not appear in _Service Credentials_, but you can [add them there](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings#adding-users-to-_service-credentials_) if you choose. Note, that these users will not be integrated with IAM controls, even if added to _Service Credentials_.
 
 ## The `ibm` user
 
