@@ -20,6 +20,7 @@ Messages For RabbitMQ
 	howto-getting-connection-strings.md
 	howto-user-management.md
 	/cloud-databases/cloud-databases-deprovisioning
+	/cloud-databases/cloud-databases-ha-dr
 
 	{: .topicgroup}
 	Connecting to Messages for RabbitMQ
@@ -32,7 +33,7 @@ Messages For RabbitMQ
 		howto-resources-scaling.md
 		howto-autoscaling.md
 
-	/cloud-databases/cloud-databases-dashboard-backups
+	learn-rabbitmq-backups.md
 	/cloud-databases/cloud-databases-allowlisting
 	howto-plugins.md
 	howto-upgrading.md
@@ -52,5 +53,6 @@ Messages For RabbitMQ
 	/cloud-databases/cloud-databases-iam
 	/cloud-databases/cloud-databases-service-endpoints
 	/cloud-databases/cloud-databases-key-protect
+	/cloud-databases/cloud-databases-dashboard-backups
 	/cloud-databases/cloud-databases-responsibilities-cloud-databases
 	{: .navgroup-end}
