@@ -76,5 +76,5 @@ The RabbitMQ documentation provides an excellent [Reliability Guide](https://www
 
 ## High availability, disaster recovery, and SLA resources
 
-{{site.data.keyword.messages-for-rabbitmq}} deployments conform to the {{site.data.keyword.cloud_notm}} Databases [HA, DR, and SLA](/cloud-databases/cloud-databases-ha-dr) terms.
+{{site.data.keyword.messages-for-rabbitmq}} deployments conform to the {{site.data.keyword.cloud_notm}} Databases [HA, DR, and SLA](/docs/cloud-databases?topic=cloud-databases-ha-dr) terms.
 
