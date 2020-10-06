@@ -71,3 +71,4 @@ Health checks consume system resources. For smaller, less busy deployments, the 
 ## Notes for Compose Users
 
 If you are migrating to {{site.data.keyword.messages-for-rabbitmq}} from an IBM Cloud Compose For RabbitMQ deployment, you might find the article [Getting Started with Messages for RabbitMQ](https://www.ibm.com/cloud/blog/getting-started-with-ibm-cloud-messages-for-rabbitmq) helpful. The configuration of alarms as well as the lack of autoscaling differs from the your previous deployments, and it does have an affect on performance. Testing and tuning your new deployment before moving over production work loads is highly recommended.
+
