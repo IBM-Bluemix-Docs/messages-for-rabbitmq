@@ -67,6 +67,8 @@ ibmcloud cdb deployment-connections example-deployment -u <newusername> --all [-
 
 If you don't specify a user, the `deployment-connections` commands return information for the admin user by default. If you don't specify an endpoint type, the connection string returns the public endpoint by default. If your deployment only has a private endpoint, you have to specify `--endpoint-type private` or the commands return an error. The user and endpoint type is not enforced. You can use any user on your deployment with either endpoint (if both exist on your deployment).
 
+To use the `ibmcloud cdb` CLI commands, you must [install the {{site.data.keyword.databases-for}} plugin](/docs/databases-for-mongodb?topic=databases-cli-plugin-cdb-reference#installing-the-cloud-databases-cli-plug-in).
+{: .tip}
 ### From the API
 
 The _Foundation Endpoint_ that is shown on the _Overview_ panel of your service provides the base URL to access this deployment through the API. To create and manage users, use the base URL with the `/users` endpoint.
