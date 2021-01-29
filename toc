@@ -28,6 +28,7 @@ Messages For RabbitMQ
 		connecting-ibmcloud-app.md
 		connecting-external.md
 		connecting-cli-client.md
+		/cloud-databases/cloud-databases-vpes
 
 	{: .topicgroup}
 	Resources and Scaling
@@ -58,6 +59,7 @@ Messages For RabbitMQ
 	/cloud-databases/cloud-databases-iam
 	/cloud-databases/cloud-databases-service-endpoints
 	/cloud-databases/cloud-databases-key-protect
+	/cloud-databases/cloud-databases-hpcs
 	/cloud-databases/cloud-databases-dashboard-backups
 	/cloud-databases/cloud-databases-responsibilities-cloud-databases
 	{: .navgroup-end}
