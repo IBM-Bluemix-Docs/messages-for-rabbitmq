@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2018
-lastupdated: "2018-11-27"
+  years: 2018, 2021
+lastupdated: "2021-02-02"
 
 subcollection: messages-for-rabbitmq
 
@@ -29,6 +29,8 @@ If you have already created your deployment and just want to connect to your Rab
 Make sure that you have an [{{site.data.keyword.cloud_notm}} account][ibm_cloud_signup_url]{:new_window}.
 
 You also need to install [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/downloads).
+
+Review the [`Getting to production`](/docs/cloud-databases?topic=cloud-databases-best-practices) documentation for general guidance on setting up a basic {{site.data.keyword.messages-for-rabbitmq_full}} deployment.
 
 ## Step 1. Create a {{site.data.keyword.messages-for-rabbitmq}} service instance
 {: #create-service}

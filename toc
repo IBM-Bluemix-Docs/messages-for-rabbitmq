@@ -6,13 +6,13 @@ Messages For RabbitMQ
 
 	{: .navgroup id="learn"}
 	getting-started.md
+	/cloud-databases/cloud-databases-best-practices
 	[What are Message Queues?](https://www.ibm.com/cloud/learn/message-queues)
 	learn-dashboard-overview.md
 	learn-high-availability.md
 	learn-performance.md
 	learn-security-compliance.md
 	learn-pricing.md
-	/cloud-databases/cloud-databases-best-practices
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
