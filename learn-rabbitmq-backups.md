@@ -31,7 +31,7 @@ Review the [management responsibilities and terms and conditions](/docs/messages
 
 The expected operation for a {{site.data.keyword.messages-for-rabbitmq}} deployment is to keep queues short: messages are written and read in a short cycle with focus on throughput. {{site.data.keyword.messages-for-rabbitmq}} deployments are not intended as a data store like other {{site.data.keyword.cloud}} offerings. 
 
-For message delivery with durability and consistent quality of service, you must use [quorum queues](/docs/messages-for-rabbitmq?topic=cloud-databases-high-availability#quorum-queues). 
+For message delivery with durability and consistent quality of service, you must use [quorum queues](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-high-availability#quorum-queues). 
 
 The [Shovel plug-in](https://www.rabbitmq.com/shovel.html) can also help move messages across instances. While not a backup mechanism, this plug-in can aid in message retention. 
 
