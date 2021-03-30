@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2018, 2020
-lastupdated: "2020-03-16"
+  years: 2018, 2021
+lastupdated: "2021-03-30"
 
 keywords: rabbitmq, databases, memory alarms, disk alarms, monitoring, disk I/O
 
@@ -24,7 +24,7 @@ subcollection: messages-for-rabbitmq
 
 ## Monitoring your deployment
 
-{{site.data.keyword.messages-for-rabbitmq}} deployments offer an integration with the [{{site.data.keyword.cloud_notm}} Monitoring service](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and IOPS, are presented to help you configure [autoscaling](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
+{{site.data.keyword.messages-for-rabbitmq}} deployments offer an integration with the [{{site.data.keyword.monitoringfull}} service](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring) for basic monitoring of resource usage on your deployment. Many of the available metrics, like disk usage and IOPS, are presented to help you configure [autoscaling](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment. Observing trends in your usage and configuring the autoscaling to respond to them can help alleviate performance problems before your databases become unstable due to resource exhaustion.
 
 ## RabbitMQ Memory Usage
 
@@ -44,7 +44,7 @@ More information about memory alarms can be found in the [RabbitMQ documentation
 
 ## Disk IOPS
 
-The number of Input-Output Operations per second (IOPS) is limited by the type of storage volume that is being used. Storage volumes for {{site.data.keyword.messages-for-rabbitmq}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/BlockStorage?topic=BlockStorage-About#provendurance). IOPS limits can affect RabbitMQ message throughput and storage operations, and hitting the limits can cause disk to fall behind on reclaiming space after messages are consumed, leading to disk alarms and publisher throttling until activity slows down. You can increase the number IOPS available to your deployment by increasing disk space.
+The number of Input-Output Operations per second (IOPS) is limited by the type of storage volume that is being used. Storage volumes for {{site.data.keyword.messages-for-rabbitmq}} deployments are provisioned on [Block Storage Endurance Volumes in the 10 IOPS per GB tier](/docs/BlockStorage?topic=BlockStorage-orderingthroughConsole#orderingthroughConsoleEndurance). IOPS limits can affect RabbitMQ message throughput and storage operations, and hitting the limits can cause disk to fall behind on reclaiming space after messages are consumed, leading to disk alarms and publisher throttling until activity slows down. You can increase the number IOPS available to your deployment by increasing disk space.
 
 ## Quorum Queues
 

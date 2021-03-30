@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-01-22"
+  years: 2019, 2021
+lastupdated: "2021-03-30"
 
 keywords: rabbitmq, databases, manual scaling, disk I/O, memory, CPU
 
@@ -56,7 +56,7 @@ You can enable or increase the CPU allocation to the deployment. With dedicated 
 
 - A few scaling operations can be more long running than others. Enabling dedicated cores moves your deployment to its own host and can take longer than just adding more cores. Similarly, drastically increasing CPU, RAM, or Disk can take longer than smaller increases to account for provisioning more underlying hardware resources.
 
-- Scaling operations are logged in [Activity Tracker](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
+- Scaling operations are logged in [{{site.data.keyword.at_full}}](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker).
 
 - If you find consistent trends in resource usage or would like to set up scaling when certain resource thresholds are reached, checkout enabling [autoscaling](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-autoscaling) on your deployment.
 
@@ -64,7 +64,7 @@ You can enable or increase the CPU allocation to the deployment. With dedicated 
 
 A visual representation of your data members and their resource allocation is available on the _Resources_ tab of your deployment's _Manage_ page. 
 
-![The Scale Resources Panel in _Settings_](images/settings-scaling.png)
+![The Scale Resources Panel in _Resources_](images/settings-scaling.png)
 
 Adjust the slider to increase or decrease the resources that are allocated to your service. The slider controls how much memory or disk is allocated per member. The UI currently uses a coarser-grained resolution of 8 GB increments for disk and 1 GB increments for memory. The UI shows the total allocated memory or disk for the position of the slider. Click **Scale** to trigger the scaling operations and return to the dashboard overview. 
 

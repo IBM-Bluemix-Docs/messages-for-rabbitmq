@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2018, 2020
-lastupdated: "2020-04-23"
+  years: 2018, 2021
+lastupdated: "2020-03-03"
 
 keywords: deployment, crn, task, gui, api endpoint
 
@@ -96,9 +96,9 @@ The _Settings_ tab contains the UI for many of the tunable settings for your dep
 ## Observability
 
 The _Observability_ tab provides access to the IBM Cloud monitoring, logging, and event tracking integrations available for your deployment. 
-- [Activity Tracker](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker)
-- [Logging](/docs/messages-for-rabbitmq?topic=cloud-databases-logging)
-- [Monitoring](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring)
+- [{{site.data.keyword.at_full}}](/docs/messages-for-rabbitmq?topic=cloud-databases-activity-tracker)
+- [{{site.data.keyword.loganalysisfull}}](/docs/messages-for-rabbitmq?topic=cloud-databases-logging)
+- [{{site.data.keyword.monitoringfull}}](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring)
 
 ## Docs
 
