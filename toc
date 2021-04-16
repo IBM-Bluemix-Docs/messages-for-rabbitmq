@@ -42,6 +42,10 @@ Messages For RabbitMQ
 	{: .topicgroup}
 	Tutorials
 		/cloud-databases/cloud-databases-tutorial-k8s-app
+		
+	{: .topicgroup}
+	Enhancing security
+		/cloud-databases/cloud-databases-manage-security-compliance
 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
