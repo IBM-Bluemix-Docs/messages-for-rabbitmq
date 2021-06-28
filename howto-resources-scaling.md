@@ -42,6 +42,18 @@ You cannot scale down storage. If your data set size has decreased, you can reco
 
 RabbitMQ throttles publishing when it detects it is using 40% of available memory to keep memory usage from growing uncontrollably during spike of activity. If you find that you regularly hit the limit, you can allocate more memory to your deployment. Adding memory to the total allocation adds memory to the members equally.
 
+### Queue Rebalancing
+
+If you notice that one RabbitMQ node is occupying significantly more resources than another, it is likely that the queues are not evenly distributed between the nodes. This can happen for the following possible reasons:
+
+- You are connected to only one of the VIPs and all the queues are created on a single node.
+- There was a rolling restart, which moves the queues to the node that was restarted first.
+
+Triggering even distribution of queues will cause load until all queues are evenly distributed so this action should not be performed while the deployment is under pressure or outscaled. 
+{: .note}
+
+To evenly distribute the queues, you can use the [RabbitMQ Management API](https://cdn.rawgit.com/rabbitmq/rabbitmq-management/v3.8.9/priv/www/api/index.html) to run an https `POST` call `/api/rebalance/queues` against your deployment.
+
 ### Dedicated Cores
 
 You can enable or increase the CPU allocation to the deployment. With dedicated cores, your resource group is given a single-tenant host with a reserve of CPU shares. Your deployment is then guaranteed the minimum number of CPUs you specify. The default of 0 dedicated cores uses compute resources on shared hosts. Going from a 0 to a >0 CPU count provisions and moves your deployment to new hosts, and your databases are restarted as part of that move. Going from >0 to a 0 CPU count, moves your deployment to a shared host and also restarts your databases as part of the move.
